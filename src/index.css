@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

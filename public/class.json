@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "title": "Learn Python Programming",
+    "name": "Python Mastery Course",
+    "img": "https://i.ibb.co/vPw1tNT/Computer-Courses-in-Perinthalmanna-python-Copy.jpg",
+    "price": 49.99,
+    "shortDescription": "Comprehensive Python course for beginners to advanced.",
+    "totalEnrolment": 1200
+  },
+  {
+    "id": "2",
+    "title": "Web Development Bootcamp",
+    "name": "Full Stack Webdevlopa",
+    "img": "https://i.ibb.co/r2NjmtG/untitlsssssed.png",
+    "price": 79.99,
+    "shortDescription": "Master the art of web development with this intensive bootcamp.",
+    "totalEnrolment": 800
+  },
+  {
+    "id": "3",
+    "title": "Data Science Fundamentals",
+    "name": "Data Science Essentials",
+    "img": "https://i.ibb.co/fXzYSnN/data-science.jpg",
+    "price": 59.99,
+    "shortDescription": "A hands-on approach to learning key data science concepts and tools.",
+    "totalEnrolment": 1500
+  },
+  {
+    "id": "4",
+    "title": "Graphic Design Basics",
+    "name": "Design Principles Workshop",
+    "img": "https://i.ibb.co/7KkCGft/istockphoto-1191609321-612x612.jpg",
+    "price": 39.99,
+    "shortDescription": "Unlock your creativity with this graphic design workshop.",
+    "totalEnrolment": 600
+  },
+  {
+    "id": "5",
+    "title": "Learn JavaScript Basics",
+    "name": "JavaScript Fundamentals",
+    "img": "https://i.ibb.co/BTCjyL0/best-ways-to-learn-javascript.jpg",
+    "price": 29.99,
+    "shortDescription": "A beginner-friendly course to master JavaScript basics.",
+    "totalEnrolment": 500
+  },
+  {
+    "id": "6",
+    "title": "Introduction to Machine Learning",
+    "name": "ML Essentials",
+    "img": "https://i.ibb.co/8K6WztT/0-BZG-tw-C8uvwtn-H91.jpg",
+    "price": 69.99,
+    "shortDescription": "Explore the fundamentals of machine learning and its applications.",
+    "totalEnrolment": 800
+  },
+  {
+    "id": "7",
+    "title": "Digital Marketing Strategies",
+    "name": "Marketing Mastery",
+    "img": "https://i.ibb.co/dQQmHqY/DM-blog-post-image-03.jpg",
+    "price": 49.99,
+    "shortDescription": "Learn effective digital marketing strategies to boost your business.",
+    "totalEnrolment": 1200
+  },
+  {
+    "id": "8",
+    "title": "Mobile App Development Workshop",
+    "name": "App Dev Bootcamp",
+    "img": "https://i.ibb.co/cgfm3Fz/mobile-apps-in-business-copy-5.jpg",
+    "price": 59.99,
+    "shortDescription": "Hands-on workshop to kickstart your mobile app development journey.",
+    "totalEnrolment": 600
+  },
+  {
+    "id": "9",
+    "title": "Creative Writing Masterclass",
+    "name": "Write Your Story",
+    "img": "https://i.ibb.co/Db20qVM/download.jpg",
+    "price": 34.99,
+    "shortDescription": "Unlock your creative potential with this comprehensive writing masterclass.",
+    "totalEnrolment": 400
+  }
+]
