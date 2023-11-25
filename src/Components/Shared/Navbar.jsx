@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png'
+import { useContext } from "react";
+import { Authcontext } from "../Provaider/Authprovider";
 
 const Navbar = () => {
-    const user = false;
+    const { user, userLogout } = useContext(Authcontext);
+
+    const handlLogout = () => {
+        userLogout()
+            .then(() => {
+
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     const menu =
         <>
             <li><Link to='/'>Home</Link></li>
@@ -26,7 +39,7 @@ const Navbar = () => {
                     <a className="btn btn-ghost font-rubik text-blue-600 text-2xl font-bold font-Chinzel">IT tech</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 ">
                         {menu}
                     </ul>
                 </div>
@@ -34,18 +47,18 @@ const Navbar = () => {
                     {user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                                <a className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
+                                <a className=" justify-evenly">
+                                    <p>Name: </p>
+                                    <h2>{user.displayName}</h2>
                                 </a>
                             </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+                            <li><a>Dashbord</a></li>
+                            <li><Link onClick={handlLogout}>Logout</Link></li>
                         </ul>
                     </div> : <Link to="/login"><button className="btn">Login</button></Link>}
                 </div>

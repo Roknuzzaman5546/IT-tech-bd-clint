@@ -1,10 +1,14 @@
-import { Link, } from 'react-router-dom';
+import { Link, useNavigate, } from 'react-router-dom';
 import loginimg from '../../../assets/authentication.gif'
+import { useContext } from 'react';
+import { Authcontext } from '../../Provaider/Authprovider';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
+    const { userLogin } = useContext(Authcontext)
     // const location = useLocation();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     // const form = location.state?.from?.pathname || '/';
     // console.log(form)
@@ -15,6 +19,23 @@ const Login = () => {
         const email = from.email.value;
         const password = from.password.value;
         console.log(email, password)
+        userLogin(email, password)
+            .then(result => {
+                console.log(result.user)
+                if (result.user) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your work has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    navigate('/')
+                }
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
 
     return (

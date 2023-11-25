@@ -1,17 +1,40 @@
 import { Link, } from "react-router-dom";
 import loginimg from '../../../assets/authentication.gif'
 import { useForm } from "react-hook-form"
+import { useContext } from "react";
+import { Authcontext } from "../../Provaider/Authprovider";
+import Swal from "sweetalert2";
 
 const Register = () => {
+    const { userRegister, profile } = useContext(Authcontext)
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
         console.log(data)
-
+        userRegister(data.email, data.password)
+            .then(result => {
+                console.log(result.user)
+                profile(data.name, data.photo)
+                    .then(() => {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "Your work has been saved",
+                            timer: 1500
+                        });
+                    })
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        reset();
     }
+
+
 
     return (
         <div className="hero min-h-screen ">
@@ -67,7 +90,7 @@ const Register = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Rgister</button>
                         </div>
-                        <h2>If You have in a account go to <Link to='/login'><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
+                        <h2>If You have in an account go to <Link to='/login'><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
                     </form>
                 </div>
             </div>

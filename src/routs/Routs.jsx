@@ -7,11 +7,14 @@ import Allclasses from "../Components/Pages/Allclasses/Allclasses";
 import Classesdetails from "../Components/Pages/Allclasses/Classesdetails";
 import Login from "../Components/Pages/Authenticatoin/Login";
 import Register from "../Components/Pages/Authenticatoin/Register";
+import Privet from "../Components/Privetrout/Privet";
+import Eroor from "../Components/Pages/Errorpage/Eroor";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <Eroor></Eroor>,
         children: [
             {
                 path: "/",
@@ -23,7 +26,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/class/:id',
-                element: <Classesdetails></Classesdetails>,
+                element: <Privet><Classesdetails></Classesdetails></Privet>,
                 loader: () => fetch('/class.json')
             },
             {

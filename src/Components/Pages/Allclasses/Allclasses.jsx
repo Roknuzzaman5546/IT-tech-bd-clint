@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import { useEffect, useState } from "react";
 import Classes from "./Classes";
 
@@ -9,6 +8,7 @@ const Allclasses = () => {
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
+
     return (
         <div>
             <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
