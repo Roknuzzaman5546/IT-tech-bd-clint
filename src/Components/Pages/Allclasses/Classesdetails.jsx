@@ -22,8 +22,7 @@ const Classesdetails = () => {
                     <h2 className=" text-2xl font-bold text-sky-500 "> {cours.title}</h2>
                     <h2 className=" text-2xl font-bold text-orange-500 ">Name: {cours.name}</h2>
                     <p className=" font-bold">Price: {cours.price}</p>
-                    <p className=" font-bold">Rating: {cours.rating}</p>
-                    <button className=" btn btn-outline mt-4">Add to card</button>
+                    <button className=" btn btn-outline mt-4">Pay</button>
                 </div>
             </div>
         </div>

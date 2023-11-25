@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png'
 
 const Navbar = () => {
-
+    const user = false;
     const menu =
         <>
             <li><Link to='/'>Home</Link></li>
@@ -23,7 +23,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <img className=" w-10 rounded-full" src={logo} alt="" />
-                    <a className="btn btn-ghost font-rubik text-red-500 text-2xl font-bold font-Chinzel">IT tech</a>
+                    <a className="btn btn-ghost font-rubik text-blue-600 text-2xl font-bold font-Chinzel">IT tech</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -31,7 +31,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className=" navbar-end">
-                    <div className="dropdown dropdown-end">
+                    {user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img alt="Tailwind CSS Navbar component" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -47,7 +47,7 @@ const Navbar = () => {
                             <li><a>Settings</a></li>
                             <li><a>Logout</a></li>
                         </ul>
-                    </div>
+                    </div> : <Link to="/login"><button className="btn">Login</button></Link>}
                 </div>
             </div>
         </div>

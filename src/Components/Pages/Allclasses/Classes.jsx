@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const Classes = ({ item }) => {
     const { name, title, img, price, totalEnrolment, id } = item;
+    
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
