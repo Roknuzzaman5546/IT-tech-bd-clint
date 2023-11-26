@@ -9,6 +9,10 @@ import Login from "../Components/Pages/Authenticatoin/Login";
 import Register from "../Components/Pages/Authenticatoin/Register";
 import Privet from "../Components/Privetrout/Privet";
 import Eroor from "../Components/Pages/Errorpage/Eroor";
+import Techonitdb from "../Components/Pages/Techonit/Techonitbd";
+import Dashbord from "../Components/Main/Dashbord";
+import Myenrollclasses from "../Components/Pages/dashbord/Myenrollclasses";
+import Userprofile from "../Components/Pages/dashbord/Userprofile";
 
 export const router = createBrowserRouter([
     {
@@ -36,7 +40,25 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/techon',
+                element: <Privet><Techonitdb></Techonitdb></Privet>
             }
         ]
     },
+    {
+        path: "/dashbord",
+        element: <Dashbord></Dashbord>,
+        children: [
+            {
+                path: "myenrollclasses",
+                element: <Myenrollclasses></Myenrollclasses>
+            },
+            {
+                path: 'profile',
+                element: <Userprofile></Userprofile>
+            }
+        ]
+    }
 ]);

@@ -5,11 +5,9 @@ import { Authcontext } from "../Provaider/Authprovider";
 
 const Navbar = () => {
     const { user, userLogout } = useContext(Authcontext);
-
     const handlLogout = () => {
         userLogout()
             .then(() => {
-
             })
             .catch(error => {
                 console.log(error)
@@ -25,7 +23,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar max-w-screen-lg mx-auto font-bold text-black fixed z-10">
+            <div className="navbar px-5 rounded-lg bg-stone-600 max-w-screen-lg mx-auto font-bold text-black">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -57,7 +55,7 @@ const Navbar = () => {
                                     <h2>{user.displayName}</h2>
                                 </a>
                             </li>
-                            <li><a>Dashbord</a></li>
+                            <li><Link to="/dashbord/myenrollclasses">Dashbord</Link></li>
                             <li><Link onClick={handlLogout}>Logout</Link></li>
                         </ul>
                     </div> : <Link to="/login"><button className="btn">Login</button></Link>}
