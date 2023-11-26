@@ -1,6 +1,5 @@
 [
   {
-    "id": "1",
     "title": "Learn Python Programming",
     "name": "Python Mastery Course",
     "img": "https://i.ibb.co/vPw1tNT/Computer-Courses-in-Perinthalmanna-python-Copy.jpg",
@@ -9,7 +8,6 @@
     "totalEnrolment": 1200
   },
   {
-    "id": "2",
     "title": "Web Development Bootcamp",
     "name": "Full Stack Webdevlopa",
     "img": "https://i.ibb.co/r2NjmtG/untitlsssssed.png",
@@ -18,7 +16,6 @@
     "totalEnrolment": 800
   },
   {
-    "id": "3",
     "title": "Data Science Fundamentals",
     "name": "Data Science Essentials",
     "img": "https://i.ibb.co/fXzYSnN/data-science.jpg",
@@ -27,7 +24,6 @@
     "totalEnrolment": 1500
   },
   {
-    "id": "4",
     "title": "Graphic Design Basics",
     "name": "Design Principles Workshop",
     "img": "https://i.ibb.co/7KkCGft/istockphoto-1191609321-612x612.jpg",
@@ -36,7 +32,6 @@
     "totalEnrolment": 600
   },
   {
-    "id": "5",
     "title": "Learn JavaScript Basics",
     "name": "JavaScript Fundamentals",
     "img": "https://i.ibb.co/BTCjyL0/best-ways-to-learn-javascript.jpg",
@@ -45,7 +40,6 @@
     "totalEnrolment": 500
   },
   {
-    "id": "6",
     "title": "Introduction to Machine Learning",
     "name": "ML Essentials",
     "img": "https://i.ibb.co/8K6WztT/0-BZG-tw-C8uvwtn-H91.jpg",
@@ -54,7 +48,6 @@
     "totalEnrolment": 800
   },
   {
-    "id": "7",
     "title": "Digital Marketing Strategies",
     "name": "Marketing Mastery",
     "img": "https://i.ibb.co/dQQmHqY/DM-blog-post-image-03.jpg",
@@ -63,7 +56,6 @@
     "totalEnrolment": 1200
   },
   {
-    "id": "8",
     "title": "Mobile App Development Workshop",
     "name": "App Dev Bootcamp",
     "img": "https://i.ibb.co/cgfm3Fz/mobile-apps-in-business-copy-5.jpg",
@@ -72,7 +64,6 @@
     "totalEnrolment": 600
   },
   {
-    "id": "9",
     "title": "Creative Writing Masterclass",
     "name": "Write Your Story",
     "img": "https://i.ibb.co/Db20qVM/download.jpg",
