@@ -52,9 +52,9 @@ const Techonitdb = () => {
                             <select {...register("experience", { required: true })}
                                 className="select select-bordered w-full">
                                 <option disabled defaultValue={"Please select"}>Please select</option>
-                                <option value="salad">Beginner</option>
-                                <option value="pizza">Experienced</option>
-                                <option value="dessert">Some idea</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Experienced">Experienced</option>
+                                <option value="Some idea">Some idea</option>
                             </select>
                         </div>
                         <div className="form-control w-full max-w-xs">

@@ -8,8 +8,8 @@ import { CgProfile } from "react-icons/cg";
 const Dashbord = () => {
     const isAdmin = true;
     return (
-        <div className=" flex mt-2">
-            <div className=" w-64 h-full bg-blue-500 p-2 rounded-md">
+        <div className=" flex">
+            <div className=" w-64 h-screen bg-blue-500 p-2 rounded-md">
                 <ul className="menu">
                     {
                         isAdmin ?
