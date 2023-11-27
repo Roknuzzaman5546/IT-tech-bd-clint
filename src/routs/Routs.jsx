@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
             {
                 path: '/class/:id',
                 element: <Privet><Classesdetails></Classesdetails></Privet>,
-                loader: () => fetch('/class.json')
+                loader: () => fetch('http://localhost:5000/class')
             },
             {
                 path: '/login',

@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import Classes from "./Classes";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
@@ -12,13 +11,6 @@ const Allclasses = () => {
             return res.data;
         }
     })
-
-    // const [courses, setCourses] = useState([]);
-    // useEffect(() => {
-    //     fetch('class.json')
-    //         .then(res => res.json())
-    //         .then(data => setCourses(data))
-    // }, [])
 
     return (
         <div>

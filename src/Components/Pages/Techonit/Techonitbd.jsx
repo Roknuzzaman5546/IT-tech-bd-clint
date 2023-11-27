@@ -49,7 +49,7 @@ const Techonitdb = () => {
                     </label>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Experience*</span>
+                            <span className="label-text">Category*</span>
                         </label>
                         <select {...register("category", { required: true })}
                             className="select select-bordered w-full">

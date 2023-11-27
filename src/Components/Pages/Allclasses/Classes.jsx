@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Classes = ({ item }) => {
-    const { name, title, img, price, totalEnrolment, id } = item;
+    const { name, title, img, price, totalEnrolment, _id } = item;
     
     return (
         <div>
@@ -16,7 +16,7 @@ const Classes = ({ item }) => {
                     <h2 className=" text-2xl font-bold">{name}</h2>
                     <p>{title}</p>
                     <p>Total enroll: {totalEnrolment}</p>
-                    <Link to={`/class/${id}`}><button className="btn btn-primary">Show details</button></Link>
+                    <Link to={`/class/${_id}`}><button className="btn btn-primary">Show details</button></Link>
                 </div>
             </div>
         </div>

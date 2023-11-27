@@ -4,7 +4,7 @@ import Title from "../../Shared/Title";
 const Classesdetails = () => {
     const courses = useLoaderData();
     const { id } = useParams();
-    const cours = courses.find(item => item.id === id)
+    const cours = courses.find(item => item._id === id)
 
     return (
         <div>

@@ -1,11 +1,14 @@
-import { Link, } from "react-router-dom";
+import { Link, useNavigate, } from "react-router-dom";
 import loginimg from '../../../assets/authentication.gif'
 import { useForm } from "react-hook-form"
 import { useContext } from "react";
 import { Authcontext } from "../../Provaider/Authprovider";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Register = () => {
+    const axiospublic = useAxiosPublic();
+    const navigate = useNavigate();
     const { userRegister, profile } = useContext(Authcontext)
     const {
         register,
@@ -20,12 +23,18 @@ const Register = () => {
                 console.log(result.user)
                 profile(data.name, data.photo)
                     .then(() => {
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "Your work has been saved",
-                            timer: 1500
-                        });
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email,
+                            role: "user"
+                        }
+                        axiospublic.post('/users', userInfo)
+                            .then(res => {
+                                console.log(res.data)
+                                Swal.fire("User succesfully creat and update profile!");
+                                reset();
+                                navigate('/')
+                            })
                     })
             })
             .catch(error => {
