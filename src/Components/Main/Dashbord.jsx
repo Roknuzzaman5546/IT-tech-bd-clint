@@ -1,4 +1,4 @@
-import { FaCalendar, FaCartShopping, FaCookie, FaHouseMedical, FaHouse, FaUtensils, FaList, FaBook, FaUsers,  } from "react-icons/fa6";
+import { FaCalendar, FaCartShopping, FaCookie, FaHouseMedical, FaHouse, FaUtensils, FaList, FaBook, FaUsers, } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import { CiMenuBurger, CiShoppingBasket } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
@@ -6,8 +6,7 @@ import { CgProfile } from "react-icons/cg";
 
 
 const Dashbord = () => {
-
-    const isAdmin = false;
+    const isAdmin = true;
     return (
         <div className=" flex mt-2">
             <div className=" w-64 h-full bg-blue-500 p-2 rounded-md">
@@ -15,25 +14,22 @@ const Dashbord = () => {
                     {
                         isAdmin ?
                             <>
-                                <li><NavLink to="/dashbord/home">
-                                    <FaHouse></FaHouse>
-                                    Admin home</NavLink></li>
-                                <li><NavLink to="/dashbord/additems">
-                                    <FaUtensils></FaUtensils>
-                                    Add  items</NavLink></li>
-                                <li><NavLink to="/dashbord/manageitems">
+                                <li><NavLink to="/dashbord/adminprofile">
+                                    <CgProfile></CgProfile>
+                                    Profile</NavLink></li>
+                                <li><NavLink to="/dashbord/allclasses">
+                                    <CiMenuBurger />
+                                    All classes</NavLink></li>
+                                <li><NavLink to="/dashbord/teachrequest">
                                     <FaList></FaList>
-                                    Manageitems</NavLink></li>
-                                <li><NavLink to="/dashbord/manageBookings">
-                                    <FaBook></FaBook>
-                                    Bookings</NavLink></li>
-                                <li><NavLink to="/dashbord/Users">
+                                    Teacher request</NavLink></li>
+                                <li><NavLink to="/dashbord/adminusers">
                                     <FaUsers></FaUsers>
-                                    All Users</NavLink></li>
+                                    Users</NavLink></li>
                             </>
                             :
                             <>
-                                <li><NavLink to="/dashbord/profile">
+                                <li><NavLink to="/dashbord/studentprofile">
                                     <CgProfile></CgProfile>
                                     Profile</NavLink></li>
                                 <li><NavLink to="/dashbord/myenrollclasses">
@@ -45,12 +41,12 @@ const Dashbord = () => {
                     <li><NavLink to="/">
                         <FaHouseMedical></FaHouseMedical>
                         Home</NavLink></li>
-                    <li><NavLink to="/menu">
+                    <li><NavLink to="/allclasses">
                         <CiMenuBurger />
-                        Menu</NavLink></li>
-                    <li><NavLink to="/shop/salad">
+                        All classes</NavLink></li>
+                    <li><NavLink to="/techon">
                         <CiShoppingBasket></CiShoppingBasket>
-                        Shop</NavLink></li>
+                        Teach on It tech</NavLink></li>
                 </ul>
             </div>
             <div className=" flex-1">

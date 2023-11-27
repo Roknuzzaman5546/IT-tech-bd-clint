@@ -13,6 +13,10 @@ import Techonitdb from "../Components/Pages/Techonit/Techonitbd";
 import Dashbord from "../Components/Main/Dashbord";
 import Myenrollclasses from "../Components/Pages/dashbord/Myenrollclasses";
 import Userprofile from "../Components/Pages/dashbord/Userprofile";
+import Adminprofile from "../Components/Pages/dashbord/adminprofile";
+import Dashallclasses from "../Components/Pages/dashbord/DashAllclasses";
+import Teacherrequest from "../Components/Pages/dashbord/Teacherrequest";
+import Adminuser from "../Components/Pages/dashbord/Adminuser";
 
 export const router = createBrowserRouter([
     {
@@ -56,8 +60,24 @@ export const router = createBrowserRouter([
                 element: <Myenrollclasses></Myenrollclasses>
             },
             {
-                path: 'profile',
+                path: 'studentprofile',
                 element: <Userprofile></Userprofile>
+            },
+            {
+                path: 'adminprofile',
+                element: <Adminprofile></Adminprofile>
+            },
+            {
+                path: 'allclasses',
+                element: <Dashallclasses></Dashallclasses>
+            },
+            {
+                path: 'teachrequest',
+                element: <Teacherrequest></Teacherrequest>
+            },
+            {
+                path: 'adminusers',
+                element: <Adminuser></Adminuser>
             }
         ]
     }

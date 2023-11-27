@@ -1,11 +1,31 @@
 import { useForm } from "react-hook-form";
 import Title from "../../Shared/Title";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { useContext } from "react";
+import { Authcontext } from "../../Provaider/Authprovider";
+import Swal from "sweetalert2";
 
 
 const Techonitdb = () => {
+    const axiospublic = useAxiosPublic();
+    const { user } = useContext(Authcontext)
     const { register, handleSubmit, reset } = useForm()
     const onSubmit = async (data) => {
         console.log(data)
+        const applyform = {
+            name: data.name,
+            image: user?.photoURL,
+            experience: data.experience,
+            title: data.title,
+            category: data.category
+        }
+        console.log(applyform)
+        axiospublic.post('/teacherreq', applyform)
+            .then(res => {
+                console.log(res.data)
+                Swal.fire("Request has been submited!");
+                reset();
+            })
     }
 
     return (
@@ -29,7 +49,7 @@ const Techonitdb = () => {
                             <label className="label">
                                 <span className="label-text">Experience*</span>
                             </label>
-                            <select {...register("category", { required: true })}
+                            <select {...register("experience", { required: true })}
                                 className="select select-bordered w-full">
                                 <option disabled defaultValue={"Please select"}>Please select</option>
                                 <option value="salad">Beginner</option>
