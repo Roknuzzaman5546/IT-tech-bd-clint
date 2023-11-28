@@ -6,7 +6,7 @@ import { CgProfile } from "react-icons/cg";
 
 
 const Dashbord = () => {
-    const isAdmin = false;
+    const isAdmin = true;
     return (
         <div className="flex lg:flex-row flex-col">
             <div className=" lg:w-64 w-full h-full bg-blue-500 p-2 rounded-md">

@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import teachingimg from '../../../assets/teacher-diversity.jpg'
 
+
 const Teaching = () => {
+
     return (
         <div className=' flex lg:flex-row flex-col items-center justify-between gap-5 my-10'>
             <div className=' '>

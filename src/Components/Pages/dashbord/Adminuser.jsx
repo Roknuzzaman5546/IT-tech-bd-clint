@@ -3,7 +3,6 @@ import Title from "../../Shared/Title";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import { Authcontext } from "../../Provaider/Authprovider";
-import { TiTick } from "react-icons/ti";
 import Swal from "sweetalert2";
 
 const Adminuser = () => {
@@ -31,7 +30,7 @@ const Adminuser = () => {
                 refetch();
             })
     }
-
+ 
 
 
     return (
