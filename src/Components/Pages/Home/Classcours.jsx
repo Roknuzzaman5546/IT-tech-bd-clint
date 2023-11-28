@@ -34,10 +34,10 @@ const Classcours = () => {
             >
                 {
                     cours.map(slid =>
-                        <SwiperSlide>
-                            <img className='w-80 h-60' src={slid.img} alt="" />
-                            <h2 className='text-3xl uppercase text-center  text-black'>{slid.title}</h2>
-                            <h2 className=' text-3xl'>{slid.price}</h2>
+                        <SwiperSlide key={slid.title}>
+                            <img className='w-60 h-60' src={slid.img} alt="" />
+                            <h2 className='text-xl uppercase text-center  text-black'>{slid.title}</h2>
+                            <h2 className='text-xl'>{slid.price}</h2>
                         </SwiperSlide>)
                 }
             </Swiper>

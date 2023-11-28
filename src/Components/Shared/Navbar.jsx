@@ -48,11 +48,10 @@ const Navbar = () => {
                                 <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                             </div>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-5 shadow bg-blue-400 rounded-box w-52">
                             <li>
-                                <a className=" justify-evenly">
-                                    <p>Name: </p>
-                                    <h2>{user.displayName}</h2>
+                                <a>
+                                    <h2 className=" uppercase">{user.displayName}</h2>
                                 </a>
                             </li>
                             <li><Link to="/dashbord/myenrollclasses">Dashbord</Link></li>

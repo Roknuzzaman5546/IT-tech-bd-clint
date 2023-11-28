@@ -7,7 +7,7 @@ const Teacherrequest = () => {
     const [teacherreq, refetch] = useTeacherreq();
     console.log(teacherreq)
     return (
-        <div className=" ml-5">
+        <div className=" lg:ml-5 ml-0">
             <Title
                 heading={'Teacher request'}
                 Subheading={'Theacher request is all here'}

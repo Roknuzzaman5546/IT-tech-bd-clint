@@ -29,14 +29,14 @@ const Techonitdb = () => {
     }
 
     return (
-        <div className="ml-7">
+        <div className="">
             <div>
                 <Title
                     Subheading={"If you tech our site then fil up the form"}
                     heading={'Feel up the form'}
                 ></Title>
             </div>
-            <div className=" bg-slate-200 px-5 py-8 space-y-2 rounded-md">
+            <div className=" bg-blue-300 px-5 py-8 space-y-2 rounded-md">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-control w-full">
                         <label className="label">
@@ -44,7 +44,7 @@ const Techonitdb = () => {
                         </label>
                         <input type="text" placeholder="Type here" {...register("name", { required: true })} className="input input-bordered w-full" />
                     </div>
-                    <div className=" flex items-center gap-6">
+                    <div className=" flex md:flex-row flex-col items-center gap-6">
                         <div className="form-control w-full">
                             <label className="label">
                                 <span className="label-text">Experience*</span>
@@ -64,9 +64,6 @@ const Techonitdb = () => {
                             <input type="text" {...register("title", { required: true })} placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                         </div>
                     </div>
-                    <label className="label mt-4">
-                        <span className="label-text">Recipe*</span>
-                    </label>
                     <div className="form-control w-full">
                         <label className="label">
                             <span className="label-text">Category*</span>

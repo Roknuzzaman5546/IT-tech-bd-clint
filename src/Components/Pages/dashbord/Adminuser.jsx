@@ -4,11 +4,12 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import { Authcontext } from "../../Provaider/Authprovider";
 import { TiTick } from "react-icons/ti";
+import Swal from "sweetalert2";
 
 const Adminuser = () => {
     const { user } = useContext(Authcontext);
     const axiospublic = useAxiosPublic();
-    const { data: users = [] } = useQuery({
+    const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
             const res = await axiospublic.get('/users')
@@ -27,10 +28,11 @@ const Adminuser = () => {
                     text: `${item._id} is Admin updated`,
                     icon: "success"
                 });
+                refetch();
             })
     }
 
-    
+
 
     return (
         <div>
@@ -67,7 +69,8 @@ const Adminuser = () => {
                                     <td>{item.name}</td>
                                     <td>{item.email}</td>
                                     <th>
-                                        <button onClick={() => handleMakeadmin(item)} className="btn btn-ghost btn-xs">{item.role}</button>
+                                        {item.role == 'admin' ? <button className="btn btn-ghost btn-xs">{item.role}</button> :
+                                            <button onClick={() => handleMakeadmin(item)} className="btn btn-ghost btn-xs">{item.role}</button>}
                                     </th>
                                 </tr>)
                             }

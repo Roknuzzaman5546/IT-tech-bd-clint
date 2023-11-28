@@ -6,11 +6,11 @@ import { CgProfile } from "react-icons/cg";
 
 
 const Dashbord = () => {
-    const isAdmin = true;
+    const isAdmin = false;
     return (
-        <div className=" flex">
-            <div className=" w-64 h-screen bg-blue-500 p-2 rounded-md">
-                <ul className="menu">
+        <div className="flex lg:flex-row flex-col">
+            <div className=" lg:w-64 w-full h-full bg-blue-500 p-2 rounded-md">
+                <ul className="menu lg:flex-col flex-row">
                     {
                         isAdmin ?
                             <>

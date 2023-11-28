@@ -3,10 +3,11 @@ import loginimg from '../../../assets/authentication.gif'
 import { useContext } from 'react';
 import { Authcontext } from '../../Provaider/Authprovider';
 import Swal from 'sweetalert2';
+import { FaGoogle } from 'react-icons/fa6';
 
 
 const Login = () => {
-    const { userLogin } = useContext(Authcontext)
+    const { userLogin, usergoogleLogin } = useContext(Authcontext)
     // const location = useLocation();
     const navigate = useNavigate();
 
@@ -38,6 +39,21 @@ const Login = () => {
             })
     }
 
+    const handlegooglelogin = () => {
+        usergoogleLogin()
+            .then(result => {
+                if (result) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your work has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+    }
+
     return (
         <div className="hero min-h-screen ">
             <div className="hero-content flex-col lg:flex-row">
@@ -65,8 +81,11 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <h2>If you new in our resturent go to <Link to='/register'><span className=' text-blue-500 font-bold text-xl'>Register</span></Link></h2>
                     </form>
+                    <div>
+                        <button className='btn w-9/12 font-bold' onClick={handlegooglelogin}><FaGoogle></FaGoogle> Google</button>
+                    </div>
+                    <h2>If you new in our resturent go to <Link to='/register'><span className=' text-blue-500 font-bold text-xl'>Register</span></Link></h2>
                 </div>
             </div>
         </div>

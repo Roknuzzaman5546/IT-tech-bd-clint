@@ -7,10 +7,10 @@ const { user } = useContext(Authcontext);
 return (
     <div>
         <Title
-            heading={'User profile'}
-            Subheading={'This is users profile'}
+            heading={'Student profile'}
+            Subheading={'This is Student profile'}
         ></Title>
-        <div className=" w-1/2 mx-auto">
+        <div className=" lg:w-1/2 lg:mx-auto w-full">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img className=" w-60 rounded-full" src={user?.photoURL} alt="Shoes" /></figure>
                 <div className=" space-y-2">
