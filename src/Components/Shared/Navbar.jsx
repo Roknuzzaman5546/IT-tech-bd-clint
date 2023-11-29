@@ -5,7 +5,6 @@ import { Authcontext } from "../Provaider/Authprovider";
 
 const Navbar = () => {
     const { user, userLogout } = useContext(Authcontext);
-    console.log(user?.photoURL)
     const handlLogout = () => {
         userLogout()
             .then(() => {

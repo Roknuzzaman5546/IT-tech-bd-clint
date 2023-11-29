@@ -1,16 +1,21 @@
-import { FaCalendar, FaCartShopping, FaCookie, FaHouseMedical, FaHouse, FaUtensils, FaList, FaBook, FaUsers, } from "react-icons/fa6";
+import { FaHouseMedical, FaHouse, FaUtensils, FaList, FaBook, FaUsers, } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import { CiMenuBurger, CiShoppingBasket } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import useAdmin from "../hooks/useAdmin";
+import useTeacher from "../hooks/useteacher";
+
 
 
 const Dashbord = () => {
-    const [isAdim] = useAdmin();
-    // const isAdmin = true;
-    const isteacher = true;
+    const [isAdmin] = useAdmin();
+    const Admin = isAdmin;
+    const [isTeacher] = useTeacher();
+    const isteacher = isTeacher;
+    console.log(isteacher)
+
     let menu = false;
-    if (isAdmin) {
+    if (Admin) {
         menu = <>
             <li><NavLink to="/dashbord/adminprofile">
                 <CgProfile></CgProfile>

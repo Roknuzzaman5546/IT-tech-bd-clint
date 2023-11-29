@@ -6,7 +6,6 @@ import { Authcontext } from '../../../Provaider/Authprovider';
 import Swal from 'sweetalert2';
 
 const Cheakoutfrom = ({ enrollclass }) => {
-    console.log(enrollclass)
     const { user } = useContext(Authcontext)
     const axiospublic = useAxiosPublic();
     const { data: users = [], refetch } = useQuery({

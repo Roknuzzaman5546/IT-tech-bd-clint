@@ -6,7 +6,6 @@ import { Elements } from '@stripe/react-stripe-js';
 
 
 const stripePromis = loadStripe(import.meta.env.VITE_PAYMENT)
-console.log(import.meta.env.VITE_PAYMENT)
 
 const Payment = ({ enrollclass }) => {
     return (

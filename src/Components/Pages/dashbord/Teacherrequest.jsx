@@ -3,10 +3,12 @@ import Title from "../../Shared/Title";
 import useTeacherreq from "./useTeacherreq";
 import { TiTick } from "react-icons/ti";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { useState } from "react";
 
 
 
 const Teacherrequest = () => {
+    const [pending, setpending] = useState(false);
     const axiospublic = useAxiosPublic();
     const [teacherreq, refetch] = useTeacherreq();
     console.log(teacherreq)
@@ -41,6 +43,7 @@ const Teacherrequest = () => {
                         });
                         refetch();
                     })
+                setpending(true)
             }
         });
     }
@@ -86,7 +89,7 @@ const Teacherrequest = () => {
                                     <td>{item.category}</td>
                                     <td>{item.title}</td>
                                     <th>
-                                        <button className="btn btn-ghost btn-xs">Panding</button>
+                                        <button className="btn btn-ghost btn-xs">{pending ? 'Approvs' : 'Pending'}</button>
                                     </th>
                                     <th>
                                         <button className="btn btn-square" onClick={() => handlerejected(item)}>
