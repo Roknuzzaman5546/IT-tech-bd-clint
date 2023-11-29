@@ -6,9 +6,9 @@ import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper/modules';
 import Title from '../../Shared/Title';
 
+
 const Classcours = () => {
     const [cours, setCours] = useState([])
-
     useEffect(() => {
         fetch('class.json')
             .then(res => res.json())

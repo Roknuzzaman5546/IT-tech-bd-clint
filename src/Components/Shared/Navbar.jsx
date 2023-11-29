@@ -5,6 +5,7 @@ import { Authcontext } from "../Provaider/Authprovider";
 
 const Navbar = () => {
     const { user, userLogout } = useContext(Authcontext);
+    console.log(user?.photoURL)
     const handlLogout = () => {
         userLogout()
             .then(() => {
@@ -45,7 +46,7 @@ const Navbar = () => {
                     {user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                <img src={user?.photoURL} alt="" />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-5 shadow bg-blue-400 rounded-box w-52">

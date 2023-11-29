@@ -18,19 +18,33 @@ const Adminuser = () => {
 
     const handleMakeadmin = item => {
         console.log('admin related', item)
-        axiospublic.patch(`/users/${item._id}`)
-            .then(res => {
-                console.log(res.data)
-                refetch();
-                Swal.fire({
-                    title: "Updated!",
-                    text: `${item._id} is Admin updated`,
-                    icon: "success"
-                });
-                refetch();
-            })
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to admin this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, admin it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const id = {
+                    id: item._id
+                }
+                axiospublic.post('/users/admin', id)
+                    .then(res => {
+                        console.log(res.data)
+                        Swal.fire({
+                            title: "Updated!",
+                            text: `${item._id} is Admin updated`,
+                            icon: "success"
+                        });
+                        refetch();
+                    })
+            }
+        });
     }
- 
+
 
 
     return (
@@ -68,8 +82,11 @@ const Adminuser = () => {
                                     <td>{item.name}</td>
                                     <td>{item.email}</td>
                                     <th>
-                                        {item.role == 'admin' ? <button className="btn btn-ghost btn-xs">{item.role}</button> :
-                                            <button onClick={() => handleMakeadmin(item)} className="btn btn-ghost btn-xs">{item.role}</button>}
+                                        {item.role == 'user' ?
+                                            <button onClick={() => handleMakeadmin(item)} className="btn btn-ghost btn-xs">{item.role}</button>
+                                            :
+                                            <button disabled className="btn btn-ghost btn-xs">{item.role}</button>
+                                        }
                                     </th>
                                 </tr>)
                             }

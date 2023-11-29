@@ -4,10 +4,12 @@ import { useContext } from 'react';
 import { Authcontext } from '../../Provaider/Authprovider';
 import Swal from 'sweetalert2';
 import { FaGoogle } from 'react-icons/fa6';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 
 const Login = () => {
     const { userLogin, usergoogleLogin } = useContext(Authcontext)
+    const axiospublic = useAxiosPublic();
     // const location = useLocation();
     const navigate = useNavigate();
 
@@ -42,14 +44,21 @@ const Login = () => {
     const handlegooglelogin = () => {
         usergoogleLogin()
             .then(result => {
+                console.log(result.user)
                 if (result) {
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: "Your work has been saved",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
+                    const userInfo = {
+                        name: result.user?.displayName,
+                        email: result.user?.email,
+                        image: result.user?.photoURL,
+                        role: "user"
+                    }
+                    axiospublic.post('/users', userInfo)
+                        .then(res => {
+                            console.log(res.data)
+                            Swal.fire("User succesfully creat and update profile!");
+                            reset();
+                            navigate('/')
+                        })
                     navigate('/')
                 }
             })

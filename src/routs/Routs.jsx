@@ -17,6 +17,7 @@ import Adminprofile from "../Components/Pages/dashbord/adminprofile";
 import Dashallclasses from "../Components/Pages/dashbord/DashAllclasses";
 import Teacherrequest from "../Components/Pages/dashbord/Teacherrequest";
 import Adminuser from "../Components/Pages/dashbord/Adminuser";
+import Payment from "../Components/Pages/Allclasses/Payment/Payment";
 
 export const router = createBrowserRouter([
     {

@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Authcontext } from "../../Provaider/Authprovider";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { FaGoogle } from "react-icons/fa6";
 
 const Register = () => {
     const axiospublic = useAxiosPublic();
@@ -100,8 +101,8 @@ const Register = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Rgister</button>
                         </div>
-                        <h2>If You have in an account go to <Link to='/login'><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
                     </form>
+                    <h2>If You have in an account go to <Link to='/login'><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
                 </div>
             </div>
         </div>

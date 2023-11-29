@@ -12,7 +12,7 @@ const Adminprofile = () => {
             ></Title>
             <div className=" lg:w-1/2 lg:mx-auto w-full">
                 <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><img className=" w-60 rounded-full" src={user?.photoURL} alt="Shoes" /></figure>
+                    <figure><img src={user?.photoURL} alt="" /></figure>
                     <div className=" space-y-2">
                         <h2 className=" text-2xl font-bold font-rubik">Name: {user?.displayName}</h2>
                         <p className=" text-xl font-bold">Role: Admin</p>

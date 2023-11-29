@@ -1,20 +1,50 @@
+import Swal from "sweetalert2";
 import Title from "../../Shared/Title";
 import useTeacherreq from "./useTeacherreq";
 import { TiTick } from "react-icons/ti";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+
 
 
 const Teacherrequest = () => {
+    const axiospublic = useAxiosPublic();
     const [teacherreq, refetch] = useTeacherreq();
     console.log(teacherreq)
 
     const handlerejected = () => {
         console.log('reject btn')
-        
     }
 
-    const handleapprove = () =>{
-        console.log('this is approve btn')
+    const handleapprove = (item) => {
+        console.log('this is approve btn', item.email)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to teacher this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Approve it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const email = {
+                    email: item.email
+                }
+                axiospublic.post('/users/teacher', email)
+                    .then(res => {
+                        console.log(res.data)
+                        refetch();
+                        Swal.fire({
+                            title: "Updated!",
+                            text: `${item._id} is teacher updated`,
+                            icon: "success"
+                        });
+                        refetch();
+                    })
+            }
+        });
     }
+
     return (
         <div className=" lg:ml-5 ml-0">
             <Title

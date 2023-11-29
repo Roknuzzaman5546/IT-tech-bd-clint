@@ -1,5 +1,6 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Title from "../../Shared/Title";
+import Payment from "./Payment/Payment";
 
 const Classesdetails = () => {
     const courses = useLoaderData();
@@ -9,8 +10,8 @@ const Classesdetails = () => {
     return (
         <div>
             <Title
-            heading={'Details'}
-            Subheading={'Details your class'}
+                heading={'Details'}
+                Subheading={'Details your class'}
             >
             </Title>
             <div className=" my-10 flex md:flex-row flex-col justify-between gap-5 items-center">
@@ -22,9 +23,9 @@ const Classesdetails = () => {
                     <h2 className=" text-2xl font-bold text-sky-500 "> {cours.title}</h2>
                     <h2 className=" text-2xl font-bold text-orange-500 ">Name: {cours.name}</h2>
                     <p className=" font-bold">Price: {cours.price}</p>
-                    <button className=" btn btn-outline mt-4">Pay</button>
                 </div>
             </div>
+            <Payment enrollclass={cours}></Payment>
         </div>
     );
 };

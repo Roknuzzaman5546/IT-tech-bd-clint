@@ -17,7 +17,7 @@ const Techonitdb = () => {
             image: user?.photoURL,
             experience: data.experience,
             title: data.title,
-            status: "pending", 
+            email: user?.email, 
             category: data.category
         }
         console.log(applyform)
@@ -81,8 +81,8 @@ const Techonitdb = () => {
                     </div>
                     <br />
                     <button className="btn mt-3 font-bold">
-                        Submit
-                    </button>
+                        Submit for review
+                    </button>   
                 </form>
             </div>
         </div>
