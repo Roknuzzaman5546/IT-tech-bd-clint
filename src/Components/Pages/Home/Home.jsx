@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
 import Partnership from './Partnership';
-import FeedbackCarousel from './FeedbackCarousel ';
 import Classcours from './Classcours';
 import Teaching from './Teaching';
 import { Helmet } from 'react-helmet';
@@ -16,7 +15,6 @@ const Home = () => {
             <Banner></Banner>
             <Partnership></Partnership>
             <Classcours></Classcours>
-            <FeedbackCarousel></FeedbackCarousel>
             <Total></Total>
             <Teaching></Teaching>
         </div>

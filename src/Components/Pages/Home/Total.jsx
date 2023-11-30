@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Title from "../../Shared/Title";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import totalimg from '../../../assets/totalpic.png'
 
 const Total = () => {
     const axiospublic = useAxiosPublic();
@@ -13,6 +14,7 @@ const Total = () => {
     })
 
     const student = users.filter(item => item.role == 'student')
+
     const { data: classes = [], } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
@@ -21,16 +23,27 @@ const Total = () => {
         }
     })
 
-    console.log(users, classes, student)
 
     return (
         <div>
             <Title
                 heading={'Our total count'}
+                Subheading={'our total count is here'}
             >
             </Title>
-            <h2>{users.length}</h2>
-            <h2>{classes.length}</h2>
+            <div className=" justify-center items-center flex md:flex-row flex-col">
+                <div className=" w-full">
+                    <div className="card w-96 bg-blue-500 shadow-xl items-center">
+                        <h3 className=" text-4xl font-bold font-rubik">Total count</h3>
+                        <h2 className=" text-2xl font-bold font-rancho">Total users: {users.length}</h2>
+                        <h2 className=" text-2xl font-bold font-rancho">Total enrolment: {student.length}</h2>
+                        <h2 className=" text-2xl font-bold font-rancho">Total class: {classes.length}</h2>
+                    </div>
+                </div>
+                <div className=" w-full">
+                    <img className=" rounded-lg" src={totalimg} alt="" />
+                </div>
+            </div>
         </div>
     );
 };

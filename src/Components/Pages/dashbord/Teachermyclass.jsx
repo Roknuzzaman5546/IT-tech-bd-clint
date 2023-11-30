@@ -17,15 +17,6 @@ const Teachermyclass = () => {
     })
 
     const enrolclass = classes.filter(item => item.email === user?.email)
-    const handledelete = (cours) => {
-        const id = {
-            cours: cours._id
-        }
-        axiossecure('/classrequest/delete', id)
-            .then(res => {
-                console.log(res.data)
-            })
-    }
 
     return (
         <div>
@@ -51,7 +42,7 @@ const Teachermyclass = () => {
                         </div>
                         <div className=" space-x-2 mt-2">
                             <button className=" btn btn-xl btn-neutral">See details</button>
-                            <button onClick={() => handledelete(cours)} className=" btn btn-xl"><FaTrash className=" font-bold text-red-500"></FaTrash></button>
+                            <button className=" btn btn-xl"><FaTrash className=" font-bold text-red-500"></FaTrash></button>
                             <button className=" btn btn-xl btn-neutral">Upadate</button>
                         </div>
                     </div>)
