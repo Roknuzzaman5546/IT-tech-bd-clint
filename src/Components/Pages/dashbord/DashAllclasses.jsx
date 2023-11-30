@@ -29,6 +29,7 @@ const Dashallclasses = () => {
                         text: `${cours.name} is class rejcted`,
                         icon: "success"
                     });
+                    refetch()
                 }
             })
         refetch()
@@ -57,6 +58,7 @@ const Dashallclasses = () => {
                         text: `${cours.name} is class accepted`,
                         icon: "success"
                     });
+                    refetch();
                 }
             })
         refetch()
