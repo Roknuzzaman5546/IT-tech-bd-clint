@@ -8,11 +8,10 @@ const useTeacher = () => {
     const { user } = useContext(Authcontext)
     const { data: isTeacher, isPending: isTeacherloading } = useQuery({
         queryKey: [user?.email, 'isTeacher'],
-            queryFn: async () => {
+        queryFn: async () => {
             const res = await axiossecure.get(`/users/teacher/${user.email}`)
-            console.log(res.data)
-           return res.data?.teacher;
-         }
+            return res.data?.teacher;
+        }
     })
     return [isTeacher, isTeacherloading];
 };

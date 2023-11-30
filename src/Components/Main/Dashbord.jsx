@@ -12,7 +12,6 @@ const Dashbord = () => {
     const Admin = isAdmin;
     const [isTeacher] = useTeacher();
     const isteacher = isTeacher;
-    console.log(isteacher)
 
     let menu = false;
     if (Admin) {
