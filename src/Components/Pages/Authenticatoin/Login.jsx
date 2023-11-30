@@ -1,4 +1,4 @@
-import { Link, useNavigate, } from 'react-router-dom';
+import { Link, useLocation, useNavigate, } from 'react-router-dom';
 import loginimg from '../../../assets/authentication.gif'
 import { useContext } from 'react';
 import { Authcontext } from '../../Provaider/Authprovider';
@@ -10,11 +10,10 @@ import useAxiosPublic from '../../hooks/useAxiosPublic';
 const Login = () => {
     const { userLogin, usergoogleLogin } = useContext(Authcontext)
     const axiospublic = useAxiosPublic();
-    // const location = useLocation();
+    const location = useLocation();
     const navigate = useNavigate();
 
-    // const form = location.state?.from?.pathname || '/';
-    // console.log(form)
+    const form = location.state?.from?.pathname || '/';
 
     const handleLogin = e => {
         e.preventDefault();

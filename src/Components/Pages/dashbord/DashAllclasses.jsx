@@ -1,14 +1,11 @@
 import React, { useContext, useState } from 'react';
 import Title from '../../Shared/Title';
-import { Authcontext } from '../../Provaider/Authprovider';
 import useAxiosSecuire from '../../hooks/useAxiosSecuire';
 import { useQuery } from '@tanstack/react-query';
-import { FaTrash } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const Dashallclasses = () => {
-    const { user } = useContext(Authcontext)
-    const [disabled, setdisabled] = useState(true)
     const axiossecure = useAxiosSecuire();
 
     const { data: classes = [], refetch } = useQuery({
@@ -36,6 +33,7 @@ const Dashallclasses = () => {
             })
         refetch()
     }
+
 
     const hadnleapprove = (cours) => {
         console.log('this is cours')
@@ -88,7 +86,7 @@ const Dashallclasses = () => {
                         </div>
                         <div className=" space-x-2 mt-2">
                             <button onClick={() => hadnleapprove(cours)} className=" btn btn-xl btn-neutral">Approve</button>
-                            {cours.status == 'accepted' ? <button className=" btn btn-neutral">See progress</button> : <button disabled className=" btn btn-neutral">See progress</button>}
+                            {cours.status == 'accepted' ? <Link to={`/dashbord/dashclass/${cours._id}`}><button className=" btn btn-neutral">See progress</button></Link> : <button disabled className=" btn btn-neutral">See progress</button>}
                             <button onClick={() => handlerejected(cours)} className=" btn btn-xl btn-neutral">Reject</button>
                         </div>
                     </div>)

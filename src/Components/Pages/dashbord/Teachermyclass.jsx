@@ -15,9 +15,8 @@ const Teachermyclass = () => {
             return res.data;
         }
     })
-    console.log(classes)
+    
     const enrolclass = classes.filter(item => item.email === user?.email)
-    console.log(enrolclass)
 
     return (
         <div>

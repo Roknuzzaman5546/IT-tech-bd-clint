@@ -3,18 +3,40 @@ import Title from "../../Shared/Title";
 import useTeacherreq from "./useTeacherreq";
 import { TiTick } from "react-icons/ti";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
-import { useState } from "react";
 
 
 
 const Teacherrequest = () => {
-    const [pending, setpending] = useState(false);
     const axiospublic = useAxiosPublic();
     const [teacherreq, refetch] = useTeacherreq();
-    console.log(teacherreq)
 
-    const handlerejected = () => {
-        console.log('reject btn')
+    const handlerejected = (item) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to teacher this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Approve it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const id = {
+                    id: item._id
+                }
+                axiospublic.post('/teacherreq/reject', id)
+                    .then(res => {
+                        if (res.data) {
+                            Swal.fire({
+                                title: "Rejected!",
+                                text: `${item._id} is teacher Rejected`,
+                                icon: "success"
+                            });
+                            refetch();
+                        }
+                    })
+            }
+        });
     }
 
     const handleapprove = (item) => {
@@ -32,18 +54,26 @@ const Teacherrequest = () => {
                 const email = {
                     email: item.email
                 }
+                const id = {
+                    id: item._id
+                }
                 axiospublic.post('/users/teacher', email)
                     .then(res => {
                         console.log(res.data)
-                        refetch();
-                        Swal.fire({
-                            title: "Updated!",
-                            text: `${item._id} is teacher updated`,
-                            icon: "success"
-                        });
-                        refetch();
+                        if (res.data) {
+                            axiospublic.post('/teacherreq/acchept', id)
+                                .then(res => {
+                                    if (res.data) {
+                                        Swal.fire({
+                                            title: "Updated!",
+                                            text: `${item._id} is teacher updated`,
+                                            icon: "success"
+                                        });
+                                        refetch();
+                                    }
+                                })
+                        }
                     })
-                setpending(true)
             }
         });
     }
@@ -89,16 +119,19 @@ const Teacherrequest = () => {
                                     <td>{item.category}</td>
                                     <td>{item.title}</td>
                                     <th>
-                                        <button className="btn btn-ghost btn-xs">{pending ? 'Approvs' : 'Pending'}</button>
+                                        <button className="btn btn-ghost btn-xs">{item.status}</button>
                                     </th>
                                     <th>
-                                        <button className="btn btn-square" onClick={() => handlerejected(item)}>
+                                        {item.status == 'pending' ? <button className="btn btn-square" onClick={() => handlerejected(item)}>
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                        </button>
+                                        </button> : <button disabled className="btn btn-square">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                        </button>}
                                     </th>
                                     <th>
-                                        <button className="btn btn-ghost btn-square" onClick={() => handleapprove(item)}><TiTick className=" text-xl"></TiTick>
-                                        </button>
+                                        {item.status == 'pending' ? <button className="btn btn-ghost btn-square" onClick={() => handleapprove(item)}><TiTick className=" text-xl"></TiTick>
+                                        </button> : <button disabled className="btn btn-ghost btn-square"><TiTick className=" text-xl"></TiTick>
+                                        </button>}
                                     </th>
                                 </tr>)
                             }

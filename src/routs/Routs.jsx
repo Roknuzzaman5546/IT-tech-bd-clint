@@ -22,6 +22,9 @@ import Teacheraddclass from "../Components/Pages/dashbord/Teacheraddclass";
 import Teachermyclass from "../Components/Pages/dashbord/Teachermyclass";
 import Sudentprofile from "../Components/Pages/dashbord/Sudentprofile";
 import Studentenrollclass from "../Components/Pages/dashbord/Studentenrollclass";
+import Dashclassdetails from "../Components/Pages/dashbord/Dashclassdetails";
+import Adminprivet from "../Components/Privetrout/Adminprivet";
+import Teacherprivet from "../Components/Privetrout/Teacherprivet";
 
 export const router = createBrowserRouter([
     {
@@ -66,40 +69,45 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'adminprofile',
-                element: <Adminprofile></Adminprofile>
+                element: <Adminprivet><Adminprofile></Adminprofile></Adminprivet>
             },
             {
                 path: 'allclasses',
-                element: <Dashallclasses></Dashallclasses>
+                element: <Adminprivet><Dashallclasses></Dashallclasses></Adminprivet>
             },
             {
                 path: 'teachrequest',
-                element: <Teacherrequest></Teacherrequest>
+                element: <Adminprivet><Teacherrequest></Teacherrequest></Adminprivet>
             },
             {
                 path: 'adminusers',
-                element: <Adminuser></Adminuser>
+                element: <Adminprivet><Adminuser></Adminuser></Adminprivet>
             },
             {
                 path: 'teacherprofile',
-                element: <Teacherprofile></Teacherprofile>
-             },
-             {
+                element: <Teacherprivet><Teacherprofile></Teacherprofile></Teacherprivet>
+            },
+            {
                 path: 'addclasses',
-                element: <Teacheraddclass></Teacheraddclass>
-             },
-             {
+                element: <Teacherprivet><Teacheraddclass></Teacheraddclass></Teacherprivet>
+            },
+            {
                 path: 'myclass',
-                element: <Teachermyclass></Teachermyclass>
-             },
-             {
+                element: <Teacherprivet><Teachermyclass></Teachermyclass></Teacherprivet>
+            },
+            {
                 path: 'studentprofile',
                 element: <Sudentprofile></Sudentprofile>
-             },
-             {
+            },
+            {
                 path: 'myenrollclasses',
                 element: <Studentenrollclass></Studentenrollclass>
-             }
+            },
+            {
+                path: 'dashclass/:id',
+                element: <Dashclassdetails></Dashclassdetails>,
+                loader: () => fetch(`http://localhost:5000/classrequest`)
+            }
         ]
     }
 ]);

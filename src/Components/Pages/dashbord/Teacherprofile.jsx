@@ -21,8 +21,8 @@ const Teacherprofile = () => {
     return (
         <div>
             <Title
-                Subheading={'Teacher profile'}
-                heading={'Your profile is here'}
+                Subheading={'Your profile is here'}
+                heading={'Teacher profile'}
             ></Title>
             <div className=" lg:w-1/2 lg:mx-auto w-full">
                 <div className="card w-96 bg-base-100 shadow-xl">

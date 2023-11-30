@@ -17,6 +17,7 @@ const Techonitdb = () => {
             image: user?.photoURL,
             experience: data.experience,
             title: data.title,
+            status: 'pending',
             email: user?.email, 
             category: data.category
         }

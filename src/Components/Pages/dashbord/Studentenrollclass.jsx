@@ -6,7 +6,6 @@ import { Authcontext } from "../../Provaider/Authprovider";
 
 const Studentenrollclass = () => {
     const { user } = useContext(Authcontext)
-    console.log(user)
     const axiossecure = useAxiosSecuire();
     const { data: classes = [], } = useQuery({
         queryKey: ['classes'],

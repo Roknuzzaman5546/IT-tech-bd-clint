@@ -92,9 +92,9 @@ const Cheakoutfrom = ({ enrollclass }) => {
                         },
                     }}
                 />
-                <button type="submit" className=" btn btn-secondary mt-2" disabled={!stripe}>
+                {currentuser?.role == 'user' ? <button type="submit" className=" btn btn-secondary mt-2" disabled={!stripe}>
                     Pay
-                </button>
+                </button> : <h2 className=' btn'>Only user enroll the class</h2>}
                 <p className=" text-red-400 ">{error}</p>
             </form>
         </div>
