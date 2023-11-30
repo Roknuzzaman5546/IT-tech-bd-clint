@@ -4,15 +4,21 @@ import Partnership from './Partnership';
 import FeedbackCarousel from './FeedbackCarousel ';
 import Classcours from './Classcours';
 import Teaching from './Teaching';
+import { Helmet } from 'react-helmet';
+import Total from './Total';
 
 const Home = () => {
     return (
         <div>
-           <Banner></Banner>
-           <Partnership></Partnership> 
-           <Classcours></Classcours>
-           <FeedbackCarousel></FeedbackCarousel>
-           <Teaching></Teaching>
+            <Helmet>
+                <title>IT tech home</title>
+            </Helmet>
+            <Banner></Banner>
+            <Partnership></Partnership>
+            <Classcours></Classcours>
+            <FeedbackCarousel></FeedbackCarousel>
+            <Total></Total>
+            <Teaching></Teaching>
         </div>
     );
 };

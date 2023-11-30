@@ -54,7 +54,7 @@ const Navbar = () => {
                                     <h2 className=" uppercase">{user.displayName}</h2>
                                 </a>
                             </li>
-                            <li><Link to="/dashbord/myenrollclasses">Dashbord</Link></li>
+                            <li><Link to="/dashbord/studentprofile">Dashbord</Link></li>
                             <li><Link onClick={handlLogout}>Logout</Link></li>
                         </ul>
                     </div> : <Link to="/login"><button className="btn">Login</button></Link>}
