@@ -31,9 +31,9 @@ const Total = () => {
                 Subheading={'our total count is here'}
             >
             </Title>
-            <div className=" justify-center items-center flex md:flex-row flex-col">
+            <div className=" justify-center items-center text-white flex md:flex-row flex-col my-10">
                 <div className=" w-full">
-                    <div className="card w-96 bg-blue-500 shadow-xl items-center">
+                    <div className="card w-96 px-4 bg-gray-800 shadow-xl items-center">
                         <h3 className=" text-4xl font-bold font-rubik">Total count</h3>
                         <h2 className=" text-2xl font-bold font-rancho">Total users: {users.length}</h2>
                         <h2 className=" text-2xl font-bold font-rancho">Total enrolment: {student.length}</h2>

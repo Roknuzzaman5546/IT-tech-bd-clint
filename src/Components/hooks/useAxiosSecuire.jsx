@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 const axiossecure = axios.create({
-    baseURL: 'https://assignment12-projects-server.vercel.app'
+    baseURL: 'http://localhost:5000'
 })
 
 

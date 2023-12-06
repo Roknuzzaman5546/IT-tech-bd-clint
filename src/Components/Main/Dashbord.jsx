@@ -55,7 +55,7 @@ const Dashbord = () => {
     }
     return (
         <div className="flex lg:flex-row flex-col">
-            <div className=" lg:w-64 w-full lg:h-screen h-full bg-blue-500 p-2 rounded-md">
+            <div className=" lg:w-64 w-full lg:h-screen h-full bg-gray-800 font-bold text-white p-2 rounded-md">
                 <ul className="menu lg:flex-col flex-row">
                     {menu}
                     <div className="divider"></div>

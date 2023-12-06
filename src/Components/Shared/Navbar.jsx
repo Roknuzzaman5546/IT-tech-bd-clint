@@ -22,8 +22,8 @@ const Navbar = () => {
         </>
 
     return (
-        <div>
-            <div className="navbar px-5 rounded-lg bg-stone-600 max-w-screen-lg mx-auto font-bold text-black">
+        <div className=" my-2">
+            <div className="navbar px-5 rounded-lg bg-gray-800 max-w-screen-lg mx-auto text-xl font-bold italic text-blue-600">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,19 +36,19 @@ const Navbar = () => {
                     <img className=" w-10 rounded-full" src={logo} alt="" />
                     <a className="btn btn-ghost font-rubik text-blue-600 text-2xl font-bold font-Chinzel">IT tech</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 ">
-                        {menu}
-                    </ul>
-                </div>
-                <div className=" navbar-end">
+                <div className="navbar-end">
+                    <div className="hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1 text-blue-600">
+                            {menu}
+                        </ul>
+                    </div>
                     {user ? <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img src={user?.photoURL} alt="" />
                             </div>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-5 shadow bg-blue-400 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-5 shadow bg-gray-800 rounded-box w-52">
                             <li>
                                 <a>
                                     <h2 className=" uppercase">{user.displayName}</h2>
