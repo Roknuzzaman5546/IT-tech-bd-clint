@@ -2,6 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 import Title from "../../Shared/Title";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import totalimg from '../../../assets/totalpic.png'
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from "react";
 
 const Total = () => {
     const axiospublic = useAxiosPublic();
@@ -23,6 +26,13 @@ const Total = () => {
         }
     })
 
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            offset: 200
+        });
+    }, []);
+
 
     return (
         <div>
@@ -32,7 +42,7 @@ const Total = () => {
             >
             </Title>
             <div className=" justify-center items-center text-white flex md:flex-row flex-col my-10">
-                <div className=" w-full">
+                <div data-aos="fade-right" className=" w-full">
                     <div className="card w-96 px-4 bg-gray-800 shadow-xl items-center">
                         <h3 className=" text-4xl font-bold font-rubik">Total count</h3>
                         <h2 className=" text-2xl font-bold font-rancho">Total users: {users.length}</h2>
@@ -40,7 +50,7 @@ const Total = () => {
                         <h2 className=" text-2xl font-bold font-rancho">Total class: {classes.length}</h2>
                     </div>
                 </div>
-                <div className=" w-full">
+                <div data-aos="fade-left" className=" w-full">
                     <img className=" rounded-lg" src={totalimg} alt="" />
                 </div>
             </div>

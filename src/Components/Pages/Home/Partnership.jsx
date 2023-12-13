@@ -3,16 +3,27 @@ import partimg2 from '../../../assets/datasoft.png'
 import partimg3 from '../../../assets/itclan.jpg'
 import partimg4 from '../../../assets/kaz.png'
 import Title from '../../Shared/Title';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
 
 
 const Partnership = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            offset: 200
+        });
+    }, []);
+
     return (
         <div className=' my-10'>
             <Title
             heading={"partership"}
             Subheading={"Our most trusted partnership in our sector"}
             ></Title>
-            <div className=' flex justify-center items-center gap-2'>
+            <div data-aos="zoom-out" className=' flex justify-center items-center gap-2'>
                 <div className=' text-center flex flex-col bg-gray-800 h-60 justify-center p-2 rounded text-white font-rancho items-center gap-2'>
                     <img className='w-20 h-20 rounded' src={partimg1} alt="" />
                     <h2>Fueling our vision for cutting-edge technology, creative it brings expertise in [specific industry/technology]. </h2>
