@@ -1,11 +1,10 @@
 import { Link, useLocation, useNavigate, } from 'react-router-dom';
-import loginimg from '../../../assets/authentication.gif'
-import bgimg from '../../../assets/azzedine-rouichi-xjYSmFBrdgY-unsplash.jpg'
 import { useContext } from 'react';
 import { Authcontext } from '../../Provaider/Authprovider';
 import Swal from 'sweetalert2';
 import { FaGoogle } from 'react-icons/fa6';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
+import './login.css'
 
 
 const Login = () => {
@@ -65,34 +64,36 @@ const Login = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-fixed" style={{backgroundImage: 'url(https://i.ibb.co/m9g4WpK/azzedine-rouichi-xj-YSm-FBrdg-Y-unsplash.jpg)'}}>
-            <div className="hero-content">
-                <div className="card bg-black text-white shadow-2xl">
-                    <form onSubmit={handleLogin} className="card-body">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text text-white">Email</span>
-                            </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+        <div className='loginbg bg-fixed'>
+            <div className="hero min-h-screen py-10 backdrop-blur-sm">
+                <div className="hero-content">
+                    <div className="card shadow-2xl backdrop-blur-xl">
+                        <form onSubmit={handleLogin} className="card-body">
+                            <h1 className="text-5xl font-bold">Login now!</h1>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Email</span>
+                                </label>
+                                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white">Password</span>
+                                </label>
+                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                                <label className="label">
+                                    <a href="#" className="label-text-alt link link-hover text-white">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+                        <div>
+                            <button className='btn w-9/12 font-bold' onClick={handlegooglelogin}><FaGoogle></FaGoogle> Google</button>
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text text-white">Password</span>
-                            </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
-                            <label className="label">
-                                <a href="#" className="label-text-alt link link-hover text-white">Forgot password?</a>
-                            </label>
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
-                        </div>
-                    </form>
-                    <div>
-                        <button className='btn w-9/12 font-bold' onClick={handlegooglelogin}><FaGoogle></FaGoogle> Google</button>
+                        <h2 className=' text-white'>If you new in our resturent go to <Link to='/register'><span className=' text-blue-700 font-bold text-xl'>Register</span></Link></h2>
                     </div>
-                    <h2>If you new in our resturent go to <Link to='/register'><span className=' text-blue-500 font-bold text-xl'>Register</span></Link></h2>
                 </div>
             </div>
         </div>
