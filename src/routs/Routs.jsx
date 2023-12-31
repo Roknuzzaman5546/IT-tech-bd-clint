@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
             {
                 path: '/class/:id',
                 element: <Privet><Classesdetails></Classesdetails></Privet>,
-                loader: () => fetch('http://localhost:5000/class')
+                loader: () => fetch('https://assignment12-projects-server.vercel.app/class')
             },
             {
                 path: '/login',

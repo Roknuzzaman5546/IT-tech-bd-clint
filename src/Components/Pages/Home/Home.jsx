@@ -13,10 +13,12 @@ const Home = () => {
                 <title>IT tech home</title>
             </Helmet>
             <Banner></Banner>
-            <Partnership></Partnership>
-            <Classcours></Classcours>
-            <Total></Total>
-            <Teaching></Teaching>
+            <div className="w-11/12 mx-auto">
+                <Partnership></Partnership>
+                <Classcours></Classcours>
+                <Total></Total>
+                <Teaching></Teaching>
+            </div>
         </div>
     );
 };

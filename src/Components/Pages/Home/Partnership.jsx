@@ -23,7 +23,7 @@ const Partnership = () => {
             heading={"partership"}
             Subheading={"Our most trusted partnership in our sector"}
             ></Title>
-            <div data-aos="zoom-out" className=' flex justify-center items-center gap-2'>
+            <div data-aos="zoom-in" className=' flex justify-center items-center gap-2'>
                 <div className=' text-center flex flex-col bg-gray-800 h-60 justify-center p-2 rounded text-white font-rancho items-center gap-2'>
                     <img className='w-20 h-20 rounded' src={partimg1} alt="" />
                     <h2>Fueling our vision for cutting-edge technology, creative it brings expertise in [specific industry/technology]. </h2>

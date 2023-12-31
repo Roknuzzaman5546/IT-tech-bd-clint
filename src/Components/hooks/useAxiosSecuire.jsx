@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 const axiossecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://assignment12-projects-server.vercel.app'
 })
 
 
@@ -14,6 +14,7 @@ const useAxiosSecuire = () => {
     const navigate = useNavigate()
     axiossecure.interceptors.request.use(function (config) {
         const token = localStorage.getItem('access-token')
+        console.log(token)
         config.headers.authorization = `Bearer ${token}`
         return config;
     }, function (error) {

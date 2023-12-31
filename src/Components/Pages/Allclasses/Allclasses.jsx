@@ -16,11 +16,11 @@ const Allclasses = () => {
     })
 
     return (
-        <div>
+        <div className="w-11/12 mx-auto">
             <Helmet>
                 <title>IT | all class</title>
             </Helmet>
-            <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+            <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
                 {
                     classes.map(item => <Classes
                         key={item._id}

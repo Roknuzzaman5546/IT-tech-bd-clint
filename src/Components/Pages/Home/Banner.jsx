@@ -1,9 +1,9 @@
-import banner from '../../../assets/banner.jpg'
+import banner from '../../../assets/towfiqu-barbhuiya-5xTYgw2g7aw-unsplash.jpg'
 
 const Banner = () => {
     return (
         <div>
-            <div className="hero min-h-screen" style={{ backgroundImage: `url(${banner})` }}>
+            <div className="hero md:min-h-screen h-[400px]" style={{ backgroundImage: `url(${banner})` }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
@@ -13,7 +13,6 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

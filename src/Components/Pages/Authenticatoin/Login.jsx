@@ -1,5 +1,6 @@
 import { Link, useLocation, useNavigate, } from 'react-router-dom';
 import loginimg from '../../../assets/authentication.gif'
+import bgimg from '../../../assets/azzedine-rouichi-xjYSmFBrdgY-unsplash.jpg'
 import { useContext } from 'react';
 import { Authcontext } from '../../Provaider/Authprovider';
 import Swal from 'sweetalert2';
@@ -64,27 +65,24 @@ const Login = () => {
     }
 
     return (
-        <div className="hero min-h-screen ">
-            <div className="hero-content flex-col lg:flex-row">
-                <div className="text-center w-1/2 lg:text-left">
-                    <img src={loginimg} alt="" />
-                </div>
-                <div className="card w-1/2 max-w-sm shadow-2xl bg-base-100">
+        <div className="hero min-h-screen bg-fixed" style={{backgroundImage: 'url(https://i.ibb.co/m9g4WpK/azzedine-rouichi-xj-YSm-FBrdg-Y-unsplash.jpg)'}}>
+            <div className="hero-content">
+                <div className="card bg-black text-white shadow-2xl">
                     <form onSubmit={handleLogin} className="card-body">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
                             <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-white">Password</span>
                             </label>
                             <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <a href="#" className="label-text-alt link link-hover text-white">Forgot password?</a>
                             </label>
                         </div>
                         <div className="form-control mt-6">

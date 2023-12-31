@@ -5,9 +5,9 @@ const Classes = ({ item }) => {
     
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
+            <div className="card bg-gray-800 shadow-xl text-white">
                 <div>
-                    <img className=" h-48 relative" src={img} alt="Shoes" />
+                    <img className="h-48 relative" src={img} alt="Shoes" />
                     <div className="absolute bottom-0 top-10 left-56">
                         <p className="bg-gray-700 text-white p-1 rounded-md">$ {price}</p>
                     </div>
