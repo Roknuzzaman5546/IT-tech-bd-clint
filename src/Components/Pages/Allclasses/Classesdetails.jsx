@@ -8,7 +8,7 @@ const Classesdetails = () => {
     const cours = courses.find(item => item._id === id)
 
     return (
-        <div>
+        <div className="w-11/12 mx-auto mt-10 mb-20">
             <Title
                 heading={'Details'}
                 Subheading={'Details your class'}

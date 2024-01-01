@@ -31,7 +31,7 @@ const Techonitdb = () => {
     }
 
     return (
-        <div className="">
+        <div className="w-11/12 mx-auto my-10">
             <div>
                 <Title
                     Subheading={"If you tech our site then fil up the form"}
