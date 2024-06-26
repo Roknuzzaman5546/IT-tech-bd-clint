@@ -2,8 +2,8 @@ import logo from '../../assets/logo.png'
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer p-10 bg-gray-900 rounded text-white font-rancho font-bold">
+        <div className='bg-gray-900'>
+            <footer className="footer p-10 md:max-w-screen-2xl w-[95%] mx-auto rounded text-white font-rancho font-bold">
                 <aside className=' flex flex-col items-center'>
                     <img className=' w-16 rounded-md' src={logo} alt="" />
                     <p>It tech bd Ltd.<br />Providing reliable tech since 1992</p>

@@ -4,11 +4,9 @@ import Footer from "../Shared/Footer";
 
 const Main = () => {
     return (
-        <div>
+        <div className=" w-screen">
             <Navbar></Navbar>
-            <div>
-                <Outlet></Outlet>
-            </div>
+            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );
