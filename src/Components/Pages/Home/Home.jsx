@@ -13,9 +13,9 @@ const Home = () => {
                 <title>IT tech home</title>
             </Helmet>
             <Banner></Banner>
-            <div className="w-11/12 mx-auto">
+            <div className="w-11/12 mx-auto overflow-hidden">
                 <Partnership></Partnership>
-                <Classcours></Classcours>
+                <Classcours></Classcours> 
                 <Total></Total>
                 <Teaching></Teaching>
             </div>

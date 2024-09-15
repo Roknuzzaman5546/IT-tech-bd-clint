@@ -1,23 +1,24 @@
+import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Classes = ({ item }) => {
     const { name, title, img, price, totalEnrolment, _id } = item;
-    
+
     return (
-        <div>
-            <div className="card bg-gray-800 shadow-xl text-white">
-                <div>
-                    <img className="h-48 relative" src={img} alt="Shoes" />
-                    <div className="absolute bottom-0 top-10 left-56">
-                        <p className="bg-gray-700 text-white p-1 rounded-md">$ {price}</p>
-                    </div>
+        <div className=" bg-gray-800 shadow-xl rounded-xl text-white cardC ">
+            <div>
+                <img className=" h-44 relative w-full rounded-t-xl" src={img} alt="Shoes" />
+                <div className="absolute bottom-0 top-0 left-0 ml-2 mt-2">
+                    <p className="bg-gray-700 text-white p-1 rounded-md text-xs">$ {price}</p>
                 </div>
-                <div className="mt-5 space-y-2 flex-col items-center">
-                    <h2 className=" text-2xl font-bold">{name}</h2>
-                    <p>{title}</p>
-                    <p>Total enroll: {totalEnrolment}</p>
-                    <Link to={`/class/${_id}`}><button className="btn btn-primary">Show details</button></Link>
-                </div>
+            </div>
+            <div className="mt-2 pl-3 pb-3">
+                <h2 className=" text-sm font-bold line-clamp-1 mt-1 hover:text-blue-600 cursor-pointer">{name}</h2>
+                <p className="text-xs mt-2">{title}</p>
+                <p className="text-xs">Total enroll: {totalEnrolment}</p>
+                <button className=" text-sm flex items-center justify-center gap-1 buttn mt-2">
+                    Show Details <FaArrowRight></FaArrowRight>
+                </button>
             </div>
         </div>
     );
