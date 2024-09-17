@@ -60,10 +60,11 @@
   overflow: hidden;
   padding: 12px;
   text-align: center;
+  font-size: small;
   margin: 0 5px;
   background: white;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 650;
 }
 
 .box:before {

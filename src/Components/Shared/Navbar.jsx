@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png'
 import { useContext, useEffect, useState } from "react";
 import { Authcontext } from "../Provaider/Authprovider";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
     const { user, userLogout } = useContext(Authcontext);
@@ -15,16 +16,56 @@ const Navbar = () => {
             })
     }
 
-    const menu =
-        <>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/allclasses'>All classes</Link></li>
-            <li><Link to='/techon'>Tech on it tech</Link></li>
-        </>
+    // const menu =
+    //     <>
+    //         <li><Link to='/'>Home</Link></li>
+    //         <li><Link to='/allclasses'>All classes</Link></li>
+    //         <li><Link to='/techon'>Tech on it tech</Link></li>
+    //     </>   
+        
+        const menu =
+            <>
+                <li><NavLink to='/' active={ '/'}>
+                    Home
+                </NavLink></li>
+                <li><NavLink to='/allclasses' active={ '/allclasses'}>
+                    All Class
+                </NavLink></li>
+                <li><NavLink to='/techon' active={ '/techon'}>
+                    Tech on It tech
+                </NavLink></li>
+                <li><NavLink to='/about' active={ '/about'}>
+                    About us
+                </NavLink></li>
+            </>
+
+    // dropdown link defined
+    // const otherDropDownLinks = (
+    //     <>
+    //         <li><NavLink href={route('faq')} active={route().current('faq')} className=" relative font-bold text-white mx-2">Faq</NavLink></li>
+    //         <li><NavLink href={route('privecy.policy')} active={route().current('privecy.policy')} className=" relative font-bold text-white mx-2">Privecy Policy</NavLink></li>
+    //         <li><NavLink href={route('terms.condition')} active={route().current('terms.condition')} className=" relative font-bold text-white mx-2">Terms & Condition</NavLink></li>
+    //         <li><NavLink href={route('contact.us')} active={route().current('contact.us')} className=" relative font-bold text-white mx-2">Contact us</NavLink></li>
+    //     </>
+    // )
+    // // dropdown link defined
+    // const dropNavLinks = (
+    //     <>
+    //         <div className="dropdown dropdown-hover relative h-[65px]">
+    //             <div tabIndex={0} role="button" className="relative text-white mx-3 flex items-center h-[95%]">More</div>
+    //             <ul className="menu dropdown-content z-[1] bg-gray-800 pl-5  w-[220px] border-white border-x-[2px] rounded-[5px] pt-0 pb-1 absolute top-14 left-0 md:-left-24">
+    //                 {otherDropDownLinks}
+    //             </ul>
+    //         </div>
+    //     </>
+    // )
+
+
+
 
     return (
         <div>
-            <div className="navbar px-5 bg-gray-800 text-xl font-bold italic text-blue-600 p-2">
+            <div className="navbar px-5 bg-gray-800 text-xl text-white font-bold italic text-Z p-2">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,7 +99,7 @@ const Navbar = () => {
                             <li><Link to="/dashbord/studentprofile">Dashbord</Link></li>
                             <li><Link onClick={handlLogout}>Logout</Link></li>
                         </ul>
-                    </div> : <Link to="/login"><button className="btn">Login</button></Link>}
+                    </div> : <Link to="/login"><button className="box butt text-sm rounded">Login</button></Link>}
                 </div>
             </div>
         </div>
