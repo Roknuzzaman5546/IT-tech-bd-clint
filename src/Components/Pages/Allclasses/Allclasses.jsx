@@ -1,7 +1,7 @@
-import Classes from "./Classes";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { Helmet } from "react-helmet";
+import Classes from './Classes'
 
 
 

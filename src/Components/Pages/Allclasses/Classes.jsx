@@ -1,15 +1,16 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import './Classes.css'
 
 const Classes = ({ item }) => {
     const { name, title, img, price, totalEnrolment, _id } = item;
 
     return (
         <div className=" bg-gray-800 shadow-xl rounded-xl text-white cardC ">
-            <div>
+            <div className=" relative">
                 <img className=" h-44 relative w-full rounded-t-xl" src={img} alt="Shoes" />
                 <div className="absolute bottom-0 top-0 left-0 ml-2 mt-2">
-                    <p className="bg-gray-700 text-white p-1 rounded-md text-xs">$ {price}</p>
+                    <p className=" bg-gray-700 text-white p-1 rounded-md text-xs">$ {price}</p>
                 </div>
             </div>
             <div className="mt-2 pl-3 pb-3">

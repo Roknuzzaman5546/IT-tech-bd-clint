@@ -8,9 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-        rubik: "'Rubik Moonrocks', sans-serif",
-        rancho: "'Rancho', cursive"
+        // sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+        // rubik: "'Rubik Moonrocks', sans-serif",
+        // rancho: "'Rancho', cursive"
       }
     },
   },

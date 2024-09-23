@@ -1,0 +1,48 @@
+.cardC {
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.cardC:hover {
+    transform: scale(1.05);
+}
+
+.cardC:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+.buttn {
+    color: #e1e1e1;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+
+
+.buttn:focus,
+.buttn:hover {
+  color: #fff;
+}
+
+.buttn:focus:after,
+.buttn:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.buttn:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
