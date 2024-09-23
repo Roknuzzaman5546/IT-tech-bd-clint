@@ -44,7 +44,7 @@ const Login = () => {
     const handlegooglelogin = () => {
         usergoogleLogin()
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user)
                 if (result) {
                     const userInfo = {
                         name: result.user?.displayName,
@@ -54,7 +54,7 @@ const Login = () => {
                     }
                     axiospublic.post('/users', userInfo)
                         .then(res => {
-                            console.log(res.data)
+                            // console.log(res.data)
                             Swal.fire("User succesfully creat and update profile!");
                             reset();
                             navigate('/')

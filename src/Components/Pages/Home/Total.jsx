@@ -41,16 +41,16 @@ const Total = () => {
                 Subheading={'our total count is here'}
             >
             </Title>
-            <div className=" justify-center items-center text-white flex md:flex-row flex-col my-10 gap-4">
-                <div data-aos="fade-right" className=" w-full">
-                    <div className="card w-96 px-4 bg-gray-800 shadow-xl items-center">
+            <div className=" justify-center items-center text-white flex md:flex-row flex-col my-10">
+                <div data-aos="fade-right" className=" w-1/2 mx-auto">
+                    <div className="card w-5/6 mx-auto px-4 py-4 bg-gray-800 shadow-xl items-center">
                         <h3 className=" text-4xl font-bold font-rubik">Total count</h3>
-                        <h2 className=" text-2xl font-bold font-rancho">Total users: {users.length}</h2>
-                        <h2 className=" text-2xl font-bold font-rancho">Total enrolment: {student.length}</h2>
-                        <h2 className=" text-2xl font-bold font-rancho">Total class: {classes.length}</h2>
+                        <h2 className=" text-2xl font-bold font-rancho">Total users: {users?.length}</h2>
+                        <h2 className=" text-2xl font-bold font-rancho">Total enrolment: {student?.length}</h2>
+                        <h2 className=" text-2xl font-bold font-rancho">Total class: {classes?.length}</h2>
                     </div>
                 </div>
-                <div data-aos="fade-left" className=" w-full">
+                <div data-aos="fade-left" className=" w-1/2 mx-auto">
                     <img className=" rounded-lg" src={totalimg} alt="" />
                 </div>
             </div>

@@ -1,7 +1,7 @@
-import Classes from "./Classes";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { Helmet } from "react-helmet";
+import Classes from './Classes'
 
 
 
@@ -16,11 +16,11 @@ const Allclasses = () => {
     })
 
     return (
-        <div className="w-11/12 mx-auto mb-20">
+        <div className=" w-[85%] mx-auto mb-20">
             <Helmet>
                 <title>IT | all class</title>
             </Helmet>
-            <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
                 {
                     classes.map(item => <Classes
                         key={item._id}
