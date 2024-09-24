@@ -1,0 +1,6 @@
+.conditionbgimg {
+    background-image: url('/assets/faq/faqBanner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

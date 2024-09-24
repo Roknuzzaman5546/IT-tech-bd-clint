@@ -1,0 +1,12 @@
+.faqbgimg {
+    background-image: url('/assets/faq/faqBanner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.faqimg-1 {
+    background-image: url('/assets/faq/faqs.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -16,7 +16,7 @@ const Allclasses = () => {
     })
 
     return (
-        <div className=" w-[85%] mx-auto mb-20">
+        <div className=" md:max-w-screen-2xl w-11/12 mx-auto mb-20">
             <Helmet>
                 <title>IT | all class</title>
             </Helmet>

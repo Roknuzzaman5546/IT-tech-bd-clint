@@ -136,9 +136,7 @@ const Navbar = () => {
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] px-2 py-5 shadow bg-gray-800 rounded-box w-52">
                                 <li>
-                                    <a>
-                                        <h2 className="uppercase text-white">{user?.displayName}</h2>
-                                    </a>
+                                    <h2 className="uppercase text-white">{user?.displayName}</h2>
                                 </li>
                                 <li><Link to="/dashbord/studentprofile" className="text-white">Dashboard</Link></li>
                                 <li><Link onClick={handleLogout} className="text-white">Logout</Link></li>

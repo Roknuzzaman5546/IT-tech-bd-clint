@@ -31,7 +31,7 @@ const Techonitdb = () => {
     }
 
     return (
-        <div className="w-11/12 mx-auto my-10">
+        <div className="md:max-w-screen-2xl w-11/12 mx-auto mt-10 mb-32">
             <div>
                 <Title
                     Subheading={"If you tech our site then fil up the form"}
@@ -81,7 +81,7 @@ const Techonitdb = () => {
                         </select>
                     </div>
                     <br />
-                    <button className="btn mt-3 font-bold">
+                    <button type="submit" className=" mx-auto box butt">
                         Submit for review
                     </button>   
                 </form>
