@@ -1,23 +1,20 @@
-import NavLink from '@/Components/NavLink'
-import Main from '@/Layouts/Main'
-import { Head } from '@inertiajs/react'
 import React from 'react'
 import './ContactUs.css'
 import { MdOutlineAddLocationAlt } from 'react-icons/md'
 import { IoCallOutline } from 'react-icons/io5'
 import { TfiEmail } from 'react-icons/tfi'
+import NavLink from '../../Shared/NavLink'
 
 const ContactUs = () => {
     return (
-        <Main>
-            <Head title='Contact' />
+        <div>
             {/* contact banner image */}
             <div className="contactbgimg">
                 <div className=" bg-[#000000B2]">
                     <div className=" w-full mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
-                            <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
-                            <NavLink href={route('contact.us')} active={route().current('contact.us')} className="">Contact us</NavLink>
+                            <NavLink to={'/'} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
+                            <NavLink to={'/contact'} className="">Contact us</NavLink>
                         </div>
                     </div>
                 </div>
@@ -80,7 +77,7 @@ const ContactUs = () => {
                     <input className=' mt-2 bg-gray-800 py-3 px-5 text-white font-bold cursor-pointer btn hover:bg-gray-800' type="submit" value="Send" />
                 </form>
             </div>
-        </Main >
+        </div >
     )
 }
 

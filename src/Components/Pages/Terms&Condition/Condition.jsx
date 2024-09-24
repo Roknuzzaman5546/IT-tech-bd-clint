@@ -1,31 +1,32 @@
-import Main from '@/Layouts/Main'
-import { Head } from '@inertiajs/react'
 import React from 'react'
 import './Condition.css'
-import NavLink from '@/Components/NavLink'
 import { TfiEmail } from "react-icons/tfi";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineAddLocationAlt } from 'react-icons/md'
+import NavLink from '../../Shared/NavLink';
+import mailImg from '../../../assets/condition/mail.jpg'
+import callImg from '../../../assets/condition/call.jpg'
+import locationImg from '../../../assets/condition/location.jpg'
+import conditionImg from '../../../assets/condition/condition.jpg'
 
-const Condition = ({ auth }) => {
+const Condition = () => {
     return (
-        <Main auth={auth}>
-            <Head title='Condition' />
+        <div >
             {/* faq banner image */}
             <div className="conditionbgimg">
                 <div className=" bg-[#000000B2]">
-                    <div className=" w-full mx-auto py-8 text-left">
+                    <div className=" md:max-w-screen-2xl w-11/12 mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
-                            <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
-                            <NavLink href={route('terms.condition')} active={route().current('terms.condition')} className="">Terms & Condition</NavLink>
+                            <NavLink to={'/'} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
+                            <NavLink to={'/condition'} className="">Terms & Condition</NavLink>
                         </div>
                     </div>
                 </div>
             </div>
             <h2 className=' text-4xl font-bold font-rancho text-center my-20'>Terms & conditions</h2>
             {/* terms heading part */}
-            <div className=' md:w-5/6 w-11/12 mx-auto flex md:flex-row flex-col justify-around items-center gap-10'>
-                <img className=' md:w-1/2 w-full h-[500px] rounded-md mr-10' src={'assets/condition/condition.jpg'} alt="" />
+            <div className='md:max-w-screen-2xl w-11/12 mx-auto flex md:flex-row flex-col justify-around items-center gap-10'>
+                <img className=' md:w-1/2 w-full h-[500px] rounded-md mr-10' src={conditionImg} alt="" />
                 <div className=' md:w-1/2 w-full'>
                     <h2 className=' text-2xl font-bold text-black font-rancho border-b mb-8 pb-5'>Restriction</h2>
                     <div className=' flex items-start gap-2'>
@@ -50,7 +51,7 @@ const Condition = ({ auth }) => {
             </div>
             {/*  Terms & condition  moddle part */}
             <div className=' bg-[#f4f3ee]  my-16'>
-                <div className=' md:w-5/6 mx-auto w-full flex md:flex-row flex-col justify-around items-center gap-10'>
+                <div className=' md:max-w-screen-2xl w-11/12 mx-auto flex md:flex-row flex-col justify-around items-center gap-10'>
                     <div className=' py-16 md:w-full w-11/12'>
                         <div>
                             <h2 className=' text-xl font-bold text-black'>Introduction words</h2>
@@ -115,9 +116,9 @@ const Condition = ({ auth }) => {
             </div>
             <h2 className=' text-center my-20 text-4xl font-bold font-rancho'>Need Help</h2>
             {/* Need help section */}
-            <div className=' md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col gap-8 mb-32'>
+            <div className='md:max-w-screen-2xl w-11/12 mx-auto flex md:flex-row flex-col gap-8 mb-32'>
                 <div className=' flex flex-col items-center justify-center shadow-2xl rounded-lg'>
-                    <img className='rounded-t-lg' src={'assets/Condition/mail.jpg'} alt="" />
+                    <img className='rounded-t-lg' src={mailImg} alt="" />
                     <div className=' flex flex-col items-center justify-center gap-2 py-8'>
                         <div className='bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center shadow-2xl'><TfiEmail className=' text-3xl' /></div>
                         <h3 className=' text-xl font-bold font-rancho text-black mt-2'>Chat with us</h3>
@@ -130,10 +131,10 @@ const Condition = ({ auth }) => {
                         <h3 className=' text-xl font-bold font-rancho text-black mt-2'>Speak with us</h3>
                         <p className=' text-gray-500'>Give us a call toady</p>
                     </div>
-                    <img className=' rounded-b-lg' src={'assets/Condition/call.jpg'} alt="" />
+                    <img className=' rounded-b-lg' src={callImg} alt="" />
                 </div>
                 <div className=' flex flex-col items-center justify-center shadow-2xl rounded-lg'>
-                    <img className=' rounded-t-lg' src={'assets/Condition/location.jpg'} alt="" />
+                    <img className=' rounded-t-lg' src={locationImg} alt="" />
                     <div className=' flex flex-col items-center justify-center gap-2 py-8'>
                         <div className='bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center shadow-2xl'><MdOutlineAddLocationAlt className=' text-3xl' /></div>
                         <h3 className=' text-xl font-bold font-rancho text-black mt-2'>Locate a store</h3>
@@ -141,7 +142,7 @@ const Condition = ({ auth }) => {
                     </div>
                 </div>
             </div>
-        </Main>
+        </div>
     )
 }
 

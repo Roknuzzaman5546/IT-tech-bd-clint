@@ -26,6 +26,10 @@ import Dashclassdetails from "../Components/Pages/dashbord/Dashclassdetails";
 import Adminprivet from "../Components/Privetrout/Adminprivet";
 import Teacherprivet from "../Components/Privetrout/Teacherprivet";
 import AboutUs from "../Components/Pages/About/AboutUs";
+import Faq from "../Components/Pages/Faq/Faq";
+import Privacy from "../Components/Pages/PrivacyPolicy/Privacy";
+import ContactUs from "../Components/Pages/Contact/ContactUs";
+import Condition from "../Components/Pages/Terms&Condition/Condition";
 
 export const router = createBrowserRouter([
     {
@@ -61,6 +65,22 @@ export const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <AboutUs></AboutUs>
+            },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
+            },
+            {
+                path: '/privacy',
+                element: <Privacy></Privacy>
+            },
+            {
+                path: '/contact',
+                element: <ContactUs></ContactUs>
+            },
+            {
+                path: '/condition',
+                element: <Condition></Condition>
             }
         ]
     },

@@ -1,22 +1,20 @@
-import NavLink from '@/Components/NavLink'
-import Main from '@/Layouts/Main'
-import { Head } from '@inertiajs/react'
+
 import React from 'react'
 import { RiSecurePaymentFill } from "react-icons/ri";
-import './Privecy.css'
+import './Privacy.css'
+import NavLink from '../../Shared/NavLink';
 
-const Privecy = ({ auth }) => {
+const Privacy = () => {
     return (
-        <Main auth={auth}>
-            <Head title='Privecy' />
-            {/* Privecy banner image */}
-            <div className="privecybgimg">
+        <div >
+            {/* Privacy banner image */}
+            <div className="privacyBgimg">
                 <div className=" bg-[#000000B2]">
                     <div className=" w-full mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
 
-                            <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
-                            <NavLink href={route('privecy.policy')} active={route().current('privecy.policy')} className="">Privecy policy</NavLink>
+                            <NavLink to={'/'} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
+                            <NavLink to={'/privacy'} className="">Privacy policy</NavLink>
                         </div>
                     </div>
                 </div>
@@ -77,8 +75,8 @@ const Privecy = ({ auth }) => {
                     </div>
                 </div>
             </div>
-        </Main>
+        </div>
     )
 }
 
-export default Privecy
+export default Privacy

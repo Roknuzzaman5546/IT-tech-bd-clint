@@ -1,30 +1,27 @@
-import NavLink from '@/Components/NavLink'
-import Main from '@/Layouts/Main'
-import { Head } from '@inertiajs/react'
 import React from 'react'
 import './Faq.css'
 import { FaHouseDamage, FaUserFriends } from 'react-icons/fa'
 import { GoLink } from 'react-icons/go'
 import { MdOutlineEmail } from 'react-icons/md'
 import { SlCallIn } from "react-icons/sl";
+import NavLink from '../../Shared/NavLink'
 
-const Faq = ({ auth }) => {
+const Faq = () => {
     return (
-        <Main auth={auth}>
-            <Head title='Faq' />
+        <div>
             {/* faq banner image */}
             <div className="faqbgimg">
                 <div className=" bg-[#000000B2]">
-                    <div className=" w-full mx-auto py-8 text-left">
+                    <div className=" md:max-w-screen-2xl w-11/12 mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
-                            <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
-                            <NavLink href={route('faq')} active={route().current('faq')} className="">FAQ</NavLink>
+                            <NavLink to={'/'} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
+                            <NavLink to={'/faq'} className="">FAQ</NavLink>
                         </div>
                     </div>
                 </div>
             </div>
             <h2 className=' text-3xl font-bold font-rancho text-center my-16'>Frequently asked questions</h2>
-            <div className=' md:w-4/5 w-11/12 mx-auto flex md:flex-row flex-col items-center gap-10'>
+            <div className=' md:max-w-screen-2xl w-11/12 mx-auto flex md:flex-row flex-col items-center gap-10'>
                 {/* image */}
                 <div className=' md:w-1/2 w-full mx-auto cursor-pointer'>
                     <div className="faqimg-1 rounded-md overflow-hidden">
@@ -60,7 +57,7 @@ const Faq = ({ auth }) => {
 
             {/* cotact and live chart part */}
             <div className=' bg-[#f4f3ee]  my-16'>
-                <div className=' md:w-11/12 mx-auto w-full flex md:flex-row flex-col justify-around items-center'>
+                <div className=' md:max-w-screen-2xl w-11/12 mx-auto flex md:flex-row flex-col justify-around items-center'>
                     <div className=' flex flex-col justify-center items-center gap-2 md:w-[30%] w-full py-12'>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
                             <SlCallIn className=' text-4xl' />
@@ -80,7 +77,7 @@ const Faq = ({ auth }) => {
 
             {/* Return policy task */}
             <h2 className=' text-center text-3xl font-rancho mt-10 mb-16 font-bold text-black'>Return policy</h2>
-            <div className='md:w-4/5 w-11/12 mx-auto mb-40'>
+            <div className='md:max-w-screen-2xl w-11/12 mx-auto mb-40'>
                 <div className="flex flex-col divide-y space-y-8 divide-gray-400">
                     <details>
                         <summary className="py-2 outline-none cursor-pointer font-rancho text-2xl font-bold">Optio maiores eligendi molestiae totam dolores similique?</summary>
@@ -150,7 +147,7 @@ const Faq = ({ auth }) => {
                     </details>
                 </div>
             </div>
-        </Main >
+        </div >
     )
 }
 
