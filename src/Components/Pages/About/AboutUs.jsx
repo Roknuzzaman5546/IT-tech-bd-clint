@@ -1,34 +1,34 @@
-import Main from '@/Layouts/Main';
-import { Head, Link } from '@inertiajs/react';
 import React from 'react';
 import './About.css'
-import NavLink from '@/Components/NavLink';
 import { MdOutlineEmail } from "react-icons/md";
 import { FaHouseDamage } from "react-icons/fa";
 import { GoLink } from "react-icons/go";
 import { FaUserFriends } from "react-icons/fa";
+import NavLink from '../../Shared/NavLink';
+import about1 from '../../../assets/about/about-1.jpg'
+import about2 from '../../../assets/about/about-2.jpg'
+import about3 from '../../../assets/about/about-3.jpg'
 
-const AboutUs = ({ auth }) => {
+const AboutUs = () => {
     return (
-        <Main auth={auth}>
-            <Head title='About-us'></Head>
+        <div>
             {/* About us banner */}
             <div className="aboutbgimg">
                 <div className=" bg-[#000000B2]">
-                    <div className=" w-full mx-auto py-8 text-left">
+                    <div className=" md:max-w-screen-2xl w-11/12 mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
-                            <NavLink href={route('/')} active={route().current('/')} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
-                            <NavLink href={route('about.us')} active={route().current('about.us')} className="">About us</NavLink>
+                            <NavLink to={'/'} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
+                            <NavLink to={'/about'} className="">About us</NavLink>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='  w-4/5 mx-auto'>
+            <div className='md:max-w-screen-2xl w-11/12 mx-auto'>
                 {/* About us header section */}
                 <h2 className=' text-3xl font-bold font-rancho text-center my-16'>About us</h2>
                 {/* Our comany section */}
                 <div className=' flex justify-center items-center gap-1'>
-                    <img className=' w-1/2 h-[500px] rounded-lg' src={'/assets/about/about-1.jpg'} alt="" />
+                    <img className=' w-1/2 h-[500px] rounded-lg' src={about1} alt="" />
                     <div className=' w-1/2 text-left pl-8'>
                         <h2 className=' text-2xl font-bold font-rancho text-left'>Our Company</h2>
                         <p className=' space-y-2 text-gray-600 font-rancho mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque culpa a, laudantium autem, in totam vel doloremque nobis repudiandae asperiores dolores corporis alias iure cupiditate. Blanditiis voluptatum autem amet! </p>
@@ -40,11 +40,11 @@ const AboutUs = ({ auth }) => {
                         <h2 className=' text-2xl font-bold font-rancho text-left'>Our Company</h2>
                         <p className=' space-y-2 text-gray-600 font-rancho mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque culpa a, laudantium autem, in totam vel doloremque nobis repudiandae asperiores dolores corporis alias iure cupiditate. Blanditiis voluptatum autem amet! </p>
                     </div>
-                    <img className=' w-1/2 h-[500px] rounded-lg' src={'/assets/about/about-2.jpg'} alt="" />
+                    <img className=' w-1/2 h-[500px] rounded-lg' src={about2} alt="" />
                 </div>
                 {/* Our vision */}
                 <div className=' flex justify-center items-center gap-0'>
-                    <img className=' w-1/2 h-[500px] rounded-lg' src={'/assets/about/about-3.jpg'} alt="" />
+                    <img className=' w-1/2 h-[500px] rounded-lg' src={about3} alt="" />
                     <div className=' w-1/2 text-left pl-8'>
                         <h2 className=' text-2xl font-bold font-rancho text-left'>Our vision</h2>
                         <p className=' space-y-2 text-gray-600 font-rancho mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque culpa a, laudantium autem, in totam vel doloremque nobis repudiandae asperiores dolores corporis alias iure cupiditate. Blanditiis voluptatum autem amet! </p>
@@ -53,7 +53,7 @@ const AboutUs = ({ auth }) => {
             </div>
             {/* count section */}
             <div className=' bg-[#f4f3ee]  my-10'>
-                <div className=' md:w-11/12 mx-auto w-full flex md:flex-row flex-col justify-center items-center'>
+                <div className='md:max-w-screen-2xl w-11/12 mx-auto flex md:flex-row flex-col justify-center items-center'>
                     <div className=' flex flex-col justify-center items-center gap-2 md:w-[20%] w-full py-10'>
                         <h4 className=' text-2xl font-extrabold text-[#3730A3] font-rancho'>10+</h4>
                         <div className=' bg-white h-20 w-20 rounded-full flex flex-col items-center justify-center'>
@@ -86,14 +86,14 @@ const AboutUs = ({ auth }) => {
             </div>
             {/* Our teacher */}
             <h2 className=' text-3xl font-bold font-rancho text-center my-16'>Our team</h2>
-            <div className=' md:w-4/5 w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
+            <div className=' md:max-w-screen-2xl w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
                 <div>
                     <div className="aboutteamimg-1 cursor-pointer rounded-md overflow-hidden">
                         <div className="h-80 bg-transparent hover:bg-[#2b2b2bb2] transition-colors duration-500 ease-in-out">
                         </div>
                     </div>
                     <h2 className=' text-xl font-extrabold mt-2 mb-1'>Johnny walker</h2>
-                    <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
+                    <h3 className='mb-2 font-bold text-gray-500'>Web Developer</h3>
                     <hr />
                     <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
@@ -113,7 +113,7 @@ const AboutUs = ({ auth }) => {
                         </div>
                     </div>
                     <h2 className=' text-xl font-extrabold mt-2 mb-1'>Nixim monir</h2>
-                    <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
+                    <h3 className='mb-2 font-bold text-gray-500'>Seo expert</h3>
                     <hr />
                     <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
@@ -123,12 +123,12 @@ const AboutUs = ({ auth }) => {
                         </div>
                     </div>
                     <h2 className=' text-xl font-extrabold mt-2 mb-1'>Yang chu</h2>
-                    <h3 className='mb-2 font-bold text-gray-500'>Web designer</h3>
+                    <h3 className='mb-2 font-bold text-gray-500'>Python Developer</h3>
                     <hr />
                     <p className=' mt-2 font-bold text-gray-500 space-y-1'>Vestibulum porttitor egestas orci, vitae ullamcorper risus rutrum massa quis.</p>
                 </div>
             </div>
-        </Main>
+        </div>
     );
 };
 

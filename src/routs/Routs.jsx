@@ -25,6 +25,7 @@ import Studentenrollclass from "../Components/Pages/dashbord/Studentenrollclass"
 import Dashclassdetails from "../Components/Pages/dashbord/Dashclassdetails";
 import Adminprivet from "../Components/Privetrout/Adminprivet";
 import Teacherprivet from "../Components/Privetrout/Teacherprivet";
+import AboutUs from "../Components/Pages/About/AboutUs";
 
 export const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
             {
                 path: '/techon',
                 element: <Privet><Techonitdb></Techonitdb></Privet>
+            },
+            {
+                path: '/about',
+                element: <AboutUs></AboutUs>
             }
         ]
     },

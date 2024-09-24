@@ -1,33 +1,33 @@
 .aboutbgimg {
-    background-image: url('/assets/about/about-header.jpg');
+    background-image: url('../../../assets/about/about-header.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .aboutteamimg-1{
-    background-image: url('/assets/about/team-1.jpg');
+    background-image: url('../../../assets/about/team-1.jpg');
     border-radius: 6px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .aboutteamimg-2{
-    background-image: url('/assets/about/team-2.jpg');
+    background-image: url('../../../assets/about/team-2.jpg');
     border-radius: 6px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .aboutteamimg-3{
-    background-image: url('/assets/about/team-3.jpg');
+    background-image: url('../../../assets/about/team-3.jpg');
     border-radius: 6px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .aboutteamimg-4{
-    background-image: url('/assets/about/team-4.jpg');
+    background-image: url('../../../assets/about/team-4.jpg');
     border-radius: 6px;
     background-position: center;
     background-repeat: no-repeat;
