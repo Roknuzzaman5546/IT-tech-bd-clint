@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png';
 import { useContext, useState, useCallback } from "react";
 import { Authcontext } from "../Provaider/Authprovider";
+import profileImg from "../../assets/user.png";
 import NavLink from "./NavLink";
 
 const Navbar = () => {
     const { user, userLogout } = useContext(Authcontext);
+    console.log(user);
 
     const handleLogout = () => {
         userLogout()
@@ -131,7 +133,7 @@ const Navbar = () => {
                         <div className="dropdown dropdown-end dropdown-hover">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <img src={user?.photoUrl ?? "/assets/user.png"} className='w-5 h-5 md:w-7 md:h-7 rounded-full' alt="user avatar" />
+                                    <img src={user?.photoURL ?? profileImg} className='w-5 h-5 md:w-7 md:h-7 rounded-full' alt="user avatar" />
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] px-2 py-5 shadow bg-gray-800 rounded-box w-52">
