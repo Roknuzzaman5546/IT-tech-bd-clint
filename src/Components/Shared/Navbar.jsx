@@ -143,7 +143,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                     ) : (
-                        <Link>
+                        <Link to="/login">
                             <button className="box butt text-sm rounded">Login</button>
                         </Link>
                     )}

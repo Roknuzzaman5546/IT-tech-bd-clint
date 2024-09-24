@@ -90,14 +90,14 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover text-white">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                            <div className="form-control mt-6 rounded-md">
+                                <button className=" box butt">Login</button>
                             </div>
                         </form>
-                        <div>
-                            <button className='btn w-9/12 font-bold' onClick={handlegooglelogin}><img className=' w-5 h-5' src={googlepng} alt="" /> <p>Google</p></button>
+                        <div className=" flex justify-center items-center" onClick={handlegooglelogin}>
+                            <button className='btn w-4/5 font-bold'><img className=' w-5 h-5' src={googlepng} alt="" /> <p>Google</p></button>
                         </div>
-                        <h2 className=' text-white'>If you new in our resturent go to <Link to='/register'><span className=' text-blue-700 font-bold text-xl'>Register</span></Link></h2>
+                        <h2 className=' text-white ml-9 my-3 pb-5'>If you new in our resturent go to <Link to={'/register'}><span className=' text-blue-700 font-bold text-xl'>Register</span></Link></h2>
                     </div>
                 </div>
             </div>

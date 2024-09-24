@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Authcontext } from "../../Provaider/Authprovider";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import PrimaryButton from "../../Shared/PrimaryButton";
 import './login.css'
 
 const Register = () => {
@@ -92,15 +93,14 @@ const Register = () => {
                                 {errors.password?.type == 'minLength' && <span className=" text-red-500">Password is minmum 6 carecters required</span>}
                                 {errors.password?.type == 'maxLength' && <span className=" text-red-500">Password is maximun 10 carecters required</span>}
                                 {errors.password?.type == 'pattern' && <span className=" text-red-500">Password is must one uppercase @ spachal carecters required</span>}
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary text-xl font-bold">Rgister</button>
+                            <h2 className=" text-white ml-1">If You have in an account go to <Link to={'/login'}><span className=' text-blue-600 font-bold text-xl'>Log in</span></Link></h2>
+                            <div className="flex items-center justify-start mt-2">
+                                <PrimaryButton className="ms-4 box butt" >
+                                    Register
+                                </PrimaryButton>
                             </div>
                         </form>
-                        <h2 className=" text-white">If You have in an account go to <Link to='/login'><span className=' text-blue-500 font-bold text-xl'>Log in</span></Link></h2>
                     </div>
                 </div>
             </div>
