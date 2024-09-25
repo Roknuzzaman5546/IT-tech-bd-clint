@@ -1,8 +1,8 @@
-
 import React from 'react'
 import { RiSecurePaymentFill } from "react-icons/ri";
 import './Privacy.css'
 import NavLink from '../../Shared/NavLink';
+import privacyImg from '../../../assets/privacy/privecy-policy.jpg'
 
 const Privacy = () => {
     return (
@@ -12,7 +12,6 @@ const Privacy = () => {
                 <div className=" bg-[#000000B2]">
                     <div className=" w-full mx-auto py-8 text-left">
                         <div className="mt-2 ml-5">
-
                             <NavLink to={'/'} className='navAfter relative font-medium text-base text-white mx-2'>Home /</NavLink>
                             <NavLink to={'/privacy'} className="">Privacy policy</NavLink>
                         </div>
@@ -51,7 +50,7 @@ const Privacy = () => {
                         </div>
                     </div>
                     <div className=' w-[41.7%]'>
-                        <img className=' rounded-lg min-h-[450px] h-[600px] ' src={'/assets/privecy-policy/privecy-policy.JPG'} alt="" />
+                        <img className=' rounded-lg min-h-[450px] h-[600px] ' src={privacyImg} alt="" />
                     </div>
                 </div>
                 {/* privecy middle section */}

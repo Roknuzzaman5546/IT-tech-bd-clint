@@ -68,7 +68,7 @@ const Login = () => {
         <div className='loginbg bg-fixed'>
             <div className="hero min-h-screen py-10 backdrop-blur-sm">
                 <div className="hero-content flex-col lg:flex-row gap-3">
-                    <div className=' w-4/6 shadow-2xl backdrop-blur-sm py-10 rounded-lg'>
+                    <div className=' w-4/6 shadow-2xl backdrop-blur-sm py-10 rounded-lg pl-5 ml-2'>
                         <h2 className=' text-black text-5xl font-serif font-bold'>It <span className=' text-white'>tech </span>Online learning</h2>
                         <p className=' text-black'>Please log in our site</p>
                     </div>
