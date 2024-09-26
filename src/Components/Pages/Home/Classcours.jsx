@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
 import { FreeMode, Pagination } from 'swiper/modules';
 import Title from '../../Shared/Title';
 
@@ -14,6 +15,13 @@ const Classcours = () => {
             .then(res => res.json())
             .then(data => setCours(data))
     }, [])
+    const progressCircle = useRef(null);
+    const progressContent = useRef(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+        progressCircle.current.style.setProperty("--progress", 1 - progress);
+        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    };
+
 
 
     return (
@@ -23,13 +31,26 @@ const Classcours = () => {
                 Subheading={"This is our mos popular class"}
             ></Title>
             <Swiper
-                slidesPerView={3}
+                breakpoints={{
+                    500: {
+                        width: 550,
+                        slidesPerView: 1,
+                    },
+                    800: {
+                        width: 550,
+                        slidesPerView: 2,
+                    },
+                }}
                 spaceBetween={30}
-                freeMode={true}
                 pagination={{
                     clickable: true,
                 }}
-                modules={[FreeMode, Pagination]}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
+                modules={[Autoplay]}
                 className="mySwiper"
             >
                 <div>
@@ -41,8 +62,16 @@ const Classcours = () => {
                                     <h2 className='text-xs text-white font-bold uppercase text-center'>{slid.title}</h2>
                                     <h2 className='text-xs font-bold'>{slid.price} $</h2>
                                 </div>
-                            </SwiperSlide>)
+                            </SwiperSlide>
+
+                        )
                     }
+                </div>
+                <div className="autoplay-progress hidden" slot="container-end">
+                    <svg viewBox="0 0 48 48" ref={progressCircle}>
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span ref={progressContent}></span>
                 </div>
             </Swiper>
         </div>
