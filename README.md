@@ -30,7 +30,7 @@ Check out the live website: [It-Tech](https://assingment12-projects-clilnt.web.a
 
 ## Usage
 
-### Role-Based Functionality:
+#### Role-Based Functionality:
 
 * User can browse courses and enroll.
 * Enrolled users are automatically converted into Students.
@@ -38,28 +38,28 @@ Check out the live website: [It-Tech](https://assingment12-projects-clilnt.web.a
 * Teachers can create courses, assignments, and manage their classes.
 * Admin manages site-wide operations, including approval of teacher requests and class management.
 
-### Course Browsing and Enrollment:
+#### Course Browsing and Enrollment:
 
 * Users can view available courses and select ones to enroll in.
 * Seamless course enrollment process, leading to automatic role transition.
 
-### Teacher Request System:
+#### Teacher Request System:
 
 * Users can request to become Teachers.
 * Admins have the ability to review and approve these requests.
 
-### Teacher Dashboard:
+#### Teacher Dashboard:
 
 * Teachers can manage their classes, create assignments, and track student progress.
 * Weekly assignments for enrolled students with submission and review options.
 
-### Admin Dashboard:
+#### Admin Dashboard:
 
 * Full control over platform content and users.
 * Course and class approval, content moderation, and general site maintenance.
 * Teacher request management.
 
-### Assignment System:
+#### Assignment System:
 
 * Teachers assign weekly tasks.
 * Students complete and submit their assignments for teacher review.
